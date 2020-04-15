@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  width: 500px;
+  z-index: 1;
+  /* display: flex; */
+  /* border: solid; */
+}
+.navbar a {
+  font-family: "PT Sans", sans-serif;
+  color: white;
+  text-decoration: none;
+  margin: 5%;
+}

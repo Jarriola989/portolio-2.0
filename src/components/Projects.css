@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+.projects {
+  position: relative;
+  height: 100vh;
+  border: solid;
+  color: white;
+}
+
+h1 {
+  font-family: "Righteous", cursive;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top: 5%;
+}
+
+.bottom-border {
+  background-color: #94a6bb;
+  width: 200px;
+  height: 40px;
+  margin: auto;
+}
+
+.project-menu {
+  margin-left: 10%;
+}
+.project-menu button {
+  font-family: "PT Sans", sans-serif;
+  color: rgb(199, 199, 199);
+  background-color: transparent;
+  font-size: 18px;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: transparent;
+}
+
+.project-menu button:hover {
+  border-color: rgb(159, 159, 159);
+}
+
+.project-menu button:focus {
+  outline: none;
+}
+
+button.active {
+  background-color: rgb(74, 78, 84);
+}
+button.active:hover {
+  border-color: transparent;
+}
