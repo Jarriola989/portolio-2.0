@@ -53,3 +53,33 @@ button.active {
 button.active:hover {
   border-color: transparent;
 }
+
+.all-projects {
+  /* border: solid; */
+  width: 80%;
+  height: 60%;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+}
+
+.project-box {
+  height: 90%;
+  margin: 0px 10px 0px 10px;
+}
+
+.project-box img {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+.project-box img:hover {
+  opacity: 1;
+}
+
+.bottom {
+  margin-top: auto;
+  margin-bottom: 0px;
+}
