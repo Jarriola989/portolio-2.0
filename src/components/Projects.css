@@ -54,6 +54,8 @@ button.active:hover {
   border-color: transparent;
 }
 
+/********** Project Display **********/
+
 .all-projects {
   /* border: solid; */
   width: 80%;
@@ -61,11 +63,18 @@ button.active:hover {
   margin: auto;
   margin-top: 10px;
   display: flex;
+  position: relative;
 }
 
 .project-box {
   height: 90%;
   margin: 0px 10px 0px 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.select {
+  z-index: 4;
 }
 
 .project-box img {
@@ -75,6 +84,10 @@ button.active:hover {
   transition: all 0.5s;
 }
 
+.select img {
+  opacity: 1;
+}
+
 .project-box img:hover {
   opacity: 1;
 }
@@ -82,4 +95,18 @@ button.active:hover {
 .bottom {
   margin-top: auto;
   margin-bottom: 0px;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(41, 41, 41);
+  opacity: 0.9;
+  z-index: 0;
+  /* transition: all 0.5s ease; */
+}
+
+.top {
+  z-index: 2;
 }
