@@ -110,3 +110,23 @@ button.active:hover {
 .top {
   z-index: 2;
 }
+
+@media only screen and (max-width: 425px) {
+  .project-menu {
+    margin: auto;
+    text-align: center;
+    margin: 10px;
+  }
+  .all-projects {
+    display: block;
+    height: auto;
+  }
+  .project-box {
+    width: 80%;
+    margin: 10px auto 15px auto;
+  }
+
+  .project-box img {
+    width: 100%;
+  }
+}
