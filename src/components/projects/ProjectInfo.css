@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+.project-info {
+  font-family: "PT Sans", sans-serif;
+  align-content: center;
+  /* border: solid; */
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  /* margin: 0; */
+  display: none;
+}
+
+.display {
+  display: block;
+  z-index: 3;
+}
+
+@keyframes display-info {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}
+
+.project-one {
+  padding-left: 30%;
+}
+
+.project-two {
+  padding-left: 55%;
+}
+
+h3.project-title {
+  font-size: 24px;
+}
+strong {
+  font-size: 18px;
+}
+.tech-stack ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 10px;
+  list-style: none;
+}
+
+.links {
+  display: flex;
+}
+.links button {
+  color: white;
+  background-color: rgb(57, 57, 57);
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 80px;
+  cursor: pointer;
+  border-color: rgb(57, 57, 57);
+  margin: 10px;
+}
+.links button:hover {
+  border-color: rgb(84, 84, 84);
+}
+.links button:focus {
+  outline: none;
+}

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import "./Projects.css";
 import ProfessionalProjects from "./ProfessionalProjects";
 import PersonalProjects from "./PersonalProjects";
+import "./Projects.css";
+
 class Projects extends Component {
   constructor() {
     super();
