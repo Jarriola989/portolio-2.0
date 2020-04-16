@@ -30,7 +30,11 @@
 }
 
 .project-two {
-  padding-left: 55%;
+  padding-left: 50%;
+}
+
+.project-three {
+  padding-left: 70%;
 }
 
 h3.project-title {
@@ -38,6 +42,9 @@ h3.project-title {
 }
 strong {
   font-size: 18px;
+}
+.contributions ul {
+  line-height: 2;
 }
 .tech-stack ul {
   display: grid;

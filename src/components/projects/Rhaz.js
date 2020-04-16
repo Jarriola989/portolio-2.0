@@ -2,10 +2,14 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faCode } from "@fortawesome/free-solid-svg-icons";
 
-const Rhaz = () => {
+const Rhaz = (props) => {
   return (
-    <div className="project-info">
-      <div className="project-title">RHAZ</div>
+    <div className={
+      props.display
+        ? "project-info project-three display"
+        : "project-info project-three"
+    }>
+      <h3 className="project-title">RHAZ</h3>
 
       <div className="contributions">
         <strong>My Contributions:</strong>
@@ -31,9 +35,9 @@ const Rhaz = () => {
             <FontAwesomeIcon icon={faLink} /> Live
           </button>
         </a>
-          <button disabled>
-            <FontAwesomeIcon icon={faCode} /> Source Code
-          </button>
+        <button disabled>
+          <FontAwesomeIcon icon={faCode} /> Source Code
+        </button>
       </div>
     </div>
   );

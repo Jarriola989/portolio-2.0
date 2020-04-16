@@ -3,10 +3,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faCode } from "@fortawesome/free-solid-svg-icons";
 import "./ProjectInfo.css";
 
-const GeekText = () => {
+const GeekText = (props) => {
   return (
-    <div className="project-info">
-      <div className="project-title">Geek Text</div>
+    <div
+      className={
+        props.display
+          ? "project-info project-one display"
+          : "project-info project-one"
+      }
+    >
+      <h3 className="project-title">Geek Text</h3>
 
       <div className="contributions">
         <strong>My Contributions:</strong>
@@ -38,7 +44,11 @@ const GeekText = () => {
         </a>
 
         <button disabled>
-          <FontAwesomeIcon icon={faCode} /> Source Code
+          <FontAwesomeIcon icon={faCode} /> API Source Code
+        </button>
+
+        <button disabled>
+          <FontAwesomeIcon icon={faCode} /> UI Source Code
         </button>
       </div>
     </div>
