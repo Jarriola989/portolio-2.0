@@ -1,13 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import "./Skills.css";
 import {
   faCode,
   faCodeBranch,
   faDatabase,
   faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
+import "./Skills.css";
 
 const Skills = () => {
   return (
