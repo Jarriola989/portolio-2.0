@@ -121,6 +121,9 @@ button.active:hover {
 }
 
 @media only screen and (max-width: 625px) {
+  .all-projects {
+    overflow: hidden;
+  }
   .projects {
     height: 100%;
   }

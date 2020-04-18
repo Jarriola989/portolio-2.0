@@ -167,3 +167,25 @@ strong {
 /* TODO: IPHONE11 PRO MAX*/
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
 }
+
+/* TODO: IPHONE XR - 1792x828px at 326ppi */
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+}
+
+/* IPHONE XS - 2436x1125px at 458ppi */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .project-one {
+    top: 30px;
+  }
+  .project-two {
+    top: 510px;
+  }
+
+  .project-three {
+    top: 1000px;
+  }
+}
+
+/* TODO: IPHONE XS MAX 2688x1242px at 458ppi */
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+}
