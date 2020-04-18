@@ -17,7 +17,7 @@ class Contact extends Component {
             Email: &nbsp; <input type="email" />
           </div>
           <div className="body">
-            Message: <br /> <textarea></textarea>
+            Message: <br /> <textarea placeholder="Coming Soon..."></textarea>
           </div>
           <button>Send</button>
           <a
