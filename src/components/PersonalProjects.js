@@ -23,6 +23,10 @@ class PersonalProjects extends Component {
     }
   };
 
+  closeAllProjects = () => {
+    this.setState({ geektext: false, graphtheory: false, rhaz: false });
+  };
+
   render() {
     const { geektext, graphtheory, rhaz } = this.state;
     return (
@@ -31,6 +35,7 @@ class PersonalProjects extends Component {
           className={
             geektext || graphtheory || rhaz ? "overlay top" : "overlay"
           }
+          onClick={this.closeAllProjects}
         ></div>
 
         <div

@@ -44,10 +44,10 @@ const GraphTheory = (props) => {
         </a>
 
         <button>
-          <FontAwesomeIcon icon={faCode} /> API Source Code
+          <FontAwesomeIcon icon={faCode} /> API
         </button>
         <button>
-          <FontAwesomeIcon icon={faCode} /> UI Source Code
+          <FontAwesomeIcon icon={faCode} /> UI
         </button>
       </div>
     </div>

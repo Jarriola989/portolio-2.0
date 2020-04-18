@@ -55,6 +55,7 @@ strong {
 
 .links {
   display: flex;
+  justify-content: space-around;
 }
 .links button {
   color: white;
@@ -113,5 +114,30 @@ strong {
 
   .project-three {
     padding-left: 25%;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .project-info {
+    width: 85%;
+    height: auto;
+    padding-left: 10%;
+  }
+  .project-one {
+    top: 0%;
+  }
+
+  .project-two {
+    top: 600px;
+  }
+
+  .project-three {
+    top: 1200px;
+  }
+  .contributions ul {
+    line-height: 1.5;
+  }
+  .project-info p {
+    font-size: 12px;
   }
 }

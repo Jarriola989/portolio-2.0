@@ -21,11 +21,18 @@ class ProfessionalProjects extends Component {
     }
   };
 
+  closeAllProjects = () => {
+    this.setState({ wisecode: false, wisedb: false });
+  };
+
   render() {
     const { wisecode, wisedb } = this.state;
     return (
       <div className="all-projects">
-        <div className={wisecode || wisedb ? "overlay top" : "overlay"}></div>
+        <div
+          className={wisecode || wisedb ? "overlay top" : "overlay"}
+          onClick={this.closeAllProjects}
+        ></div>
 
         <div
           className={wisecode ? "project-box select" : "project-box"}
