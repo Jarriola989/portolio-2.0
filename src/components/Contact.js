@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./Contact.css";
 
+// TODO: function to check errors and disable submit.
+
 class Contact extends Component {
   constructor() {
     super();
@@ -13,6 +15,11 @@ class Contact extends Component {
       message: "",
       loading: false,
       response: "",
+      formErrors: {
+        name: "",
+        email: "",
+        message: "",
+      },
     };
   }
 
@@ -20,11 +27,31 @@ class Contact extends Component {
     this.setState({
       [e.target.id]: e.target.value,
     });
+    const { id, value } = e.target;
+    let { formErrors } = this.state;
+
+    switch (id) {
+      case "name":
+        formErrors.name = value.length < 2 ? "Name is required." : "";
+        break;
+      case "email":
+        formErrors.email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+          value
+        )
+          ? ""
+          : "Enter valid email.";
+        break;
+      case "message":
+        formErrors.message = value.length < 10 ? "Message is too short" : "";
+        break;
+      default:
+        break;
+    }
   };
 
   sendEmail = () => {
     const { name, email, message } = this.state;
-    this.setState({loading: true});
+    this.setState({ loading: true });
     let result = fetch(
       `https://contact-janeth.netlify.app/.netlify/functions/server/contact`,
       {
@@ -43,18 +70,21 @@ class Contact extends Component {
   };
 
   render() {
+    let { formErrors } = this.state;
     return (
       <div className="contact">
         <h1>Contact</h1>
         <div className="bottom-border"></div>
         <div className="message">
           <div className="name">
-            Name: &nbsp;{" "}
+            Name: &nbsp;
             <input type="text" id="name" onChange={this.handleChange} />
+            <span className="error">{formErrors.name}</span>
           </div>
           <div className="email">
-            Email: &nbsp;{" "}
+            Email: &nbsp;
             <input type="email" id="email" onChange={this.handleChange} />
+            <span className="error">{formErrors.email}</span>
           </div>
           <div className="body">
             Message: <br />
