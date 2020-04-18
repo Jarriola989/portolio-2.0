@@ -143,6 +143,7 @@ strong {
 }
 
 /* IPHONE 11 */
+/*TODO: Disable scrolling within view.*/
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
   .project-info {
     width: 80%;
@@ -151,7 +152,7 @@ strong {
     top: 60px;
   }
   .project-two {
-    top: 580px;
+    top: 570px;
   }
 
   .project-three {
