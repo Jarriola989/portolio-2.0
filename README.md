@@ -7,3 +7,4 @@
 `npm i --save @fortawesome/free-solid-svg-icon`
 `npm i --save @fortawesome/react-fontawesome`
 `npm i --save @fortawesome/free-brands-svg-icons`
+`npm install --save react-spinners`
