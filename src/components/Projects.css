@@ -112,6 +112,10 @@ button.active:hover {
 }
 
 @media only screen and (max-width: 425px) {
+  .projects {
+    height: 100%;
+  }
+
   .project-menu {
     margin: auto;
     text-align: center;
@@ -120,6 +124,7 @@ button.active:hover {
   .all-projects {
     display: block;
     height: auto;
+    margin-bottom: 100px;
   }
   .project-box {
     width: 90%;
