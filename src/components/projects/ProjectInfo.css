@@ -151,10 +151,18 @@ strong {
     top: 60px;
   }
   .project-two {
-    top: 590px;
+    top: 580px;
   }
 
   .project-three {
     top: 1100px;
   }
+}
+
+/* TODO: IPHONE11 PRO */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+}
+
+/* TODO: IPHONE11 PRO MAX*/
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
 }
