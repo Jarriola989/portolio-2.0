@@ -4,7 +4,7 @@
   font-family: "PT Sans", sans-serif;
   align-content: center;
   /* border: solid; */
-  width: 40%;
+  width: 50%;
   height: 100%;
   position: absolute;
   /* margin: 0; */
@@ -72,4 +72,46 @@ strong {
 }
 .links button:focus {
   outline: none;
+}
+
+@media only screen and (max-width: 1500px) {
+  .project-one {
+    padding-left: 30%;
+  }
+
+  .project-two {
+    padding-left: 60%;
+  }
+
+  .project-three {
+    padding-left: 80%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .project-one {
+    padding-left: 40%;
+  }
+
+  .project-two {
+    padding-left: 70%;
+  }
+
+  .project-three {
+    padding-left: 25%;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .project-one {
+    padding-left: 50%;
+  }
+
+  .project-two {
+    padding-left: 110%;
+  }
+
+  .project-three {
+    padding-left: 25%;
+  }
 }

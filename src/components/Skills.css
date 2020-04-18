@@ -79,8 +79,18 @@
   background-color: rgb(75, 75, 75);
   border-radius: 5px;
 }
+@media only screen and (max-width: 1439px) {
+  .skills {
+    height: 100%;
+  }
+}
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 910px) {
+  .skills-box {
+    grid-template-columns: 5% 45% 45% 5%;
+  }
+}
+@media only screen and (max-width: 625px) {
   .skills {
     height: 100%;
   }

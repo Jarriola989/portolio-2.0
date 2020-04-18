@@ -111,7 +111,16 @@ button.active:hover {
   z-index: 2;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 1250px) {
+  .all-projects {
+    overflow-y: scroll;
+  }
+  .overlay {
+    width: 150%;
+  }
+}
+
+@media only screen and (max-width: 625px) {
   .projects {
     height: 100%;
   }
