@@ -44,9 +44,11 @@
 
 .skill-icon {
   font-size: 36px;
-  margin: auto;
-  display: flex;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   margin-top: 10px;
+  position: relative;
 }
 
 .languages {
