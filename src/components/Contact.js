@@ -3,6 +3,7 @@ import SyncLoader from "react-spinners/SyncLoader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./Contact.css";
+import ScrollableAnchor from "react-scrollable-anchor";
 
 // TODO: function to check errors and disable submit.
 
@@ -72,52 +73,54 @@ class Contact extends Component {
   render() {
     let { formErrors } = this.state;
     return (
-      <div className="contact">
-        <h1>Contact</h1>
-        <div className="bottom-border"></div>
-        <div className="message">
-          <div className="name">
-            Name: &nbsp;
-            <input type="text" id="name" onChange={this.handleChange} />
-            <span className="error">{formErrors.name}</span>
-          </div>
-          <div className="email">
-            Email: &nbsp;
-            <input type="email" id="email" onChange={this.handleChange} />
-            <span className="error">{formErrors.email}</span>
-          </div>
-          <div className="body">
-            Message: <br />
-            <textarea
-              id="message"
-              placeholder="Write your message here."
-              onChange={this.handleChange}
-            ></textarea>
-          </div>
-          <button onClick={this.sendEmail}>Send</button>
-          <div className="email-response">
-            <SyncLoader color={"#f6d8ae"} loading={this.state.loading} />{" "}
-            {this.state.response}
-          </div>
-          <a
-            href="https://www.linkedin.com/in/janeth-arriola-a01463158/"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="linkedin"
-          >
-            <FontAwesomeIcon icon={faLinkedin} className="linkedin" />
-          </a>
+      <ScrollableAnchor id={"contact"}>
+        <div className="contact">
+          <h1>Contact</h1>
+          <div className="bottom-border"></div>
+          <div className="message">
+            <div className="name">
+              Name: &nbsp;
+              <input type="text" id="name" onChange={this.handleChange} />
+              <span className="error">{formErrors.name}</span>
+            </div>
+            <div className="email">
+              Email: &nbsp;
+              <input type="email" id="email" onChange={this.handleChange} />
+              <span className="error">{formErrors.email}</span>
+            </div>
+            <div className="body">
+              Message: <br />
+              <textarea
+                id="message"
+                placeholder="Write your message here."
+                onChange={this.handleChange}
+              ></textarea>
+            </div>
+            <button onClick={this.sendEmail}>Send</button>
+            <div className="email-response">
+              <SyncLoader color={"#f6d8ae"} loading={this.state.loading} />{" "}
+              {this.state.response}
+            </div>
+            <a
+              href="https://www.linkedin.com/in/janeth-arriola-a01463158/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="linkedin"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="linkedin" />
+            </a>
 
-          <a
-            href="https://github.com/Jarriola989"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="github"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
+            <a
+              href="https://github.com/Jarriola989"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="github"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </div>
         </div>
-      </div>
+      </ScrollableAnchor>
     );
   }
 }

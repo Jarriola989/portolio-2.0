@@ -8,3 +8,4 @@
 `npm i --save @fortawesome/react-fontawesome`
 `npm i --save @fortawesome/free-brands-svg-icons`
 `npm install --save react-spinners`
+`npm install --save react-scrollable-anchor`
