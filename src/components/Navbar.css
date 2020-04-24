@@ -5,19 +5,29 @@
   top: 20px;
   right: 0%;
   width: 100%;
-  z-index: 1;
+  z-index: 5;
   text-align: right;
   background-color: rgba(41, 41, 41, 0.9);
   /* border: solid; */
   -webkit-box-shadow: 0px -20px 29px 50px rgba(41, 41, 41, 0.9);
   -moz-box-shadow: 0px -20px 29px 50px rgba(41, 41, 41, 0.9);
   box-shadow: 0px -20px 29px 50px rgba(41, 41, 41, 0.9);
+  animation: show-menu 1s ease 2.5s 1 both;
 }
 .navbar a {
   font-family: "PT Sans", sans-serif;
   color: white;
   text-decoration: none;
   margin: 2%;
+}
+
+@keyframes show-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 800px) {
