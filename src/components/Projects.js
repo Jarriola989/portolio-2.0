@@ -28,40 +28,33 @@ class Projects extends Component {
   };
 
   render() {
-    if (this.state.professional) {
-      return (
-        <ScrollableAnchor id={"projects"}>
-          <div className="projects" id="projects">
-            <h1>Projects</h1>
-            <div className="bottom-border"></div>
-            <div className="project-menu">
-              <button className="active" onClick={this.switchToProfessional}>
-                Professional
-              </button>
-              <button onClick={this.switchToPersonal}>Personal</button>
-            </div>
+    return (
+      <ScrollableAnchor id={"projects"}>
+        <div className="projects">
+          <h1>Projects</h1>
+          <div className="bottom-border"></div>
+          <div className="project-menu">
+            <button
+              className={this.state.professional ? "active" : ""}
+              onClick={this.switchToProfessional}
+            >
+              Professional
+            </button>
+            <button
+              className={!this.state.professional ? "active" : ""}
+              onClick={this.switchToPersonal}
+            >
+              Personal
+            </button>
+          </div>
+          {this.state.professional ? (
             <ProfessionalProjects />
-          </div>
-        </ScrollableAnchor>
-      );
-    }
-    if (this.state.personal) {
-      return (
-        <ScrollableAnchor id={"projects"}>
-          <div className="projects" id="projects">
-            <h1>Projects</h1>
-            <div className="bottom-border"></div>
-            <div className="project-menu">
-              <button onClick={this.switchToProfessional}>Professional</button>
-              <button className="active" onClick={this.switchToPersonal}>
-                Personal
-              </button>
-            </div>
+          ) : (
             <PersonalProjects />
-          </div>
-        </ScrollableAnchor>
-      );
-    }
+          )}
+        </div>
+      </ScrollableAnchor>
+    );
   }
 }
 export default Projects;
