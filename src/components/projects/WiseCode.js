@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faEyeSlash, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./ProjectInfo.css";
 
 const WiseCode = (props) => {
@@ -13,7 +13,7 @@ const WiseCode = (props) => {
       }
     >
       <h3 className="project-title">WISE Code-Mobile</h3>
-
+      <FontAwesomeIcon icon={faTimes} className="exit-project-info" />
       <div className="contributions">
         <strong>My Contributions:</strong>
         <ul>
@@ -37,11 +37,7 @@ const WiseCode = (props) => {
         </ul>
       </div>
       <div className="links">
-        <a
-          href="https://wisecode.io"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <a href="https://wisecode.io" rel="noopener noreferrer" target="_blank">
           <button className="live">
             <FontAwesomeIcon icon={faLink} /> Live
           </button>

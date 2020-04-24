@@ -25,6 +25,14 @@
   }
 }
 
+.exit-project-info {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .project-one {
   padding-left: 30%;
 }
