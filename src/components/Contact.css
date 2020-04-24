@@ -6,6 +6,8 @@
   height: 100vh;
   /* border: solid; */
   color: rgb(216, 216, 216);
+  padding: 50px 0px 100px 0px;
+  background-color: rgb(74, 74, 74);
 }
 
 .contact .bottom-border {

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import resume from "../documents/resume.pdf";
 import "./Navbar.css";
 

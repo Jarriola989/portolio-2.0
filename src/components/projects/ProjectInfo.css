@@ -7,8 +7,8 @@
   width: 50%;
   height: 100%;
   position: absolute;
-  /* margin: 0; */
   display: none;
+  /* transition: all 1s; */
 }
 
 .display {
@@ -56,17 +56,23 @@ strong {
 .links {
   display: flex;
   justify-content: space-around;
+  /* border: solid; */
+  width: 70%;
+  /* margin: auto; */
 }
 .links button {
   color: white;
   background-color: rgb(57, 57, 57);
-  font-size: 12px;
-  padding: 10px;
+  font-size: 14px;
+  padding: 10px 15px 10px 15px;
   border-radius: 5px;
   min-width: 80px;
   cursor: pointer;
   border-color: rgb(57, 57, 57);
   margin: 10px;
+}
+.links button.live {
+  background-color: #94a6bb;
 }
 .links button:hover {
   border-color: rgb(84, 84, 84);
@@ -103,21 +109,36 @@ strong {
   }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 1072px) {
+  .project-two {
+    padding-left: 80%;
+  }
+}
+
+@media only screen and (max-width: 902px) {
   .project-one {
     padding-left: 50%;
   }
 
   .project-two {
-    padding-left: 110%;
+    padding-left: 90%;
   }
 
   .project-three {
     padding-left: 25%;
   }
+  .links {
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width: 625px) {
+@media only screen and (max-width: 800px) {
+  .project-two {
+    padding-left: 100%;
+  }
+}
+
+@media only screen and (max-width: 675px) {
   .project-info {
     width: 85%;
     height: auto;
@@ -138,6 +159,12 @@ strong {
     line-height: 1.5;
   }
   .project-info p {
+    font-size: 12px;
+  }
+  .links {
+    width: 100%;
+  }
+  .links button {
     font-size: 12px;
   }
 }
