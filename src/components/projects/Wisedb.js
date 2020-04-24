@@ -34,7 +34,7 @@ const Wisedb = (props) => {
         </ul>
       </div>
       <div className="links">
-        <button disabled>
+        <button disabled className="live">
           <FontAwesomeIcon icon={faEyeSlash} /> Live
         </button>
         <button disabled>

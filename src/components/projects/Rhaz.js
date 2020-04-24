@@ -4,11 +4,13 @@ import { faLink, faCode } from "@fortawesome/free-solid-svg-icons";
 
 const Rhaz = (props) => {
   return (
-    <div className={
-      props.display
-        ? "project-info project-three display"
-        : "project-info project-three"
-    }>
+    <div
+      className={
+        props.display
+          ? "project-info project-three display"
+          : "project-info project-three"
+      }
+    >
       <h3 className="project-title">RHAZ</h3>
 
       <div className="contributions">
@@ -29,15 +31,20 @@ const Rhaz = (props) => {
           href="https://simmer.io/@Dazen/rhaz"
           rel="noopener noreferrer"
           target="_blank"
-          className="project-link"
         >
-          <button>
+          <button className="live">
             <FontAwesomeIcon icon={faLink} /> Live
           </button>
         </a>
-        <button disabled>
-          <FontAwesomeIcon icon={faCode} /> Source Code
-        </button>
+        <a
+          href="https://github.com/wangscs/RHAZ"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <button >
+            <FontAwesomeIcon icon={faCode} /> Source Code
+          </button>
+        </a>
       </div>
     </div>
   );

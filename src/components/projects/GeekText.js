@@ -36,20 +36,29 @@ const GeekText = (props) => {
           href="https://geek-text.netlify.com/"
           rel="noopener noreferrer"
           target="_blank"
-          className="project-link"
         >
-          <button>
+          <button className="live">
             <FontAwesomeIcon icon={faLink} /> Live
           </button>
         </a>
-
-        <button disabled>
-          <FontAwesomeIcon icon={faCode} /> API Source Code
-        </button>
-
-        <button disabled>
-          <FontAwesomeIcon icon={faCode} /> UI Source Code
-        </button>
+        <a
+          href="https://github.com/raroche/geek-text-ui"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <button>
+            <FontAwesomeIcon icon={faCode} /> UI
+          </button>
+        </a>
+        <a
+          href="https://github.com/raroche/geek-text-api"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <button>
+            <FontAwesomeIcon icon={faCode} /> API
+          </button>
+        </a>
       </div>
     </div>
   );

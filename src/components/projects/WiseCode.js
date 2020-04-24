@@ -41,9 +41,8 @@ const WiseCode = (props) => {
           href="https://wisecode.io"
           rel="noopener noreferrer"
           target="_blank"
-          // className="project-link"
         >
-          <button>
+          <button className="live">
             <FontAwesomeIcon icon={faLink} /> Live
           </button>
         </a>

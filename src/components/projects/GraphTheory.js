@@ -32,23 +32,29 @@ const GraphTheory = (props) => {
         </ul>
       </div>
       <div className="links">
-        <a
-          href="/"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="project-link"
-        >
-          <button>
+        <a href="/" rel="noopener noreferrer" target="_blank">
+          <button className="live">
             <FontAwesomeIcon icon={faLink} /> Live
           </button>
         </a>
-
-        <button>
-          <FontAwesomeIcon icon={faCode} /> API
-        </button>
-        <button>
-          <FontAwesomeIcon icon={faCode} /> UI
-        </button>
+        <a
+          href="https://github.com/Jarriola989/graph-theory-ui"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <button>
+            <FontAwesomeIcon icon={faCode} /> UI
+          </button>
+        </a>
+        <a
+          href="https://github.com/Jarriola989/graph-theory-api"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <button>
+            <FontAwesomeIcon icon={faCode} /> API
+          </button>
+        </a>
       </div>
     </div>
   );
