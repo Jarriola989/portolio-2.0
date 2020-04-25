@@ -20,7 +20,7 @@
   display: flex;
   width: 50px;
   position: relative;
-  animation: bar-pink 0.7s ease 2.5s 1 both;
+  animation: bar-pink 0.5s ease 2.5s 1 both;
 }
 .first-bar {
   /* border: solid; */
@@ -37,7 +37,7 @@
   display: flex;
   width: 50px;
   position: relative;
-  animation: bar-blue 0.6s ease 2.7s 1 both;
+  animation: bar-blue 0.4s ease 2.6s 1 both;
 }
 .mobile-menu-2 .first-bar {
   left: 10px;
@@ -46,7 +46,7 @@
   height: 20px;
   width: 50px;
   text-align: end;
-  animation: bar-cream 0.5s ease 2.9s 1 both;
+  animation: bar-cream 0.3s ease 2.7s 1 both;
 }
 
 @keyframes bar-pink {
@@ -56,7 +56,7 @@
   50% {
     opacity: 1;
     color: #da4167;
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   100% {
     color: rgb(187, 187, 187);
@@ -70,7 +70,7 @@
   50% {
     opacity: 1;
     color: #94a6bb;
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   100% {
     color: rgb(187, 187, 187);
@@ -84,7 +84,7 @@
   50% {
     opacity: 1;
     color: #f6d8ae;
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   100% {
     color: rgb(187, 187, 187);
