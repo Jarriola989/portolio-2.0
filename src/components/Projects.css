@@ -66,6 +66,7 @@ button.active:hover {
   margin-top: 10px;
   display: flex;
   position: relative;
+  overflow-x: scroll;
 }
 
 .project-box {
@@ -114,9 +115,6 @@ button.active:hover {
 }
 
 @media only screen and (max-width: 1250px) {
-  .all-projects {
-    overflow-y: scroll;
-  }
   .overlay {
     width: 150%;
   }

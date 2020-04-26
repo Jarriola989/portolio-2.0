@@ -2,6 +2,8 @@
 
 body {
   background-color: rgb(41, 41, 41);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .landing {

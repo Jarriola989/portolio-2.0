@@ -4,10 +4,15 @@
   font-family: "PT Sans", sans-serif;
   align-content: center;
   /* border: solid; */
-  width: 50%;
+  width: 30%;
   height: 100%;
   position: absolute;
   display: none;
+  padding: 10px 30px 20px 30px;
+  height: auto;
+  border: solid thin;
+  border-radius: 10px;
+  border-color: rgb(142, 142, 142);
   /* transition: all 1s; */
 }
 
@@ -27,22 +32,23 @@
 
 .exit-project-info {
   position: absolute;
-  top: 5px;
-  right: 0;
+  top: 10px;
+  right: 10px;
   font-size: 20px;
   cursor: pointer;
+  color: rgb(142, 142, 142);
 }
 
 .project-one {
-  padding-left: 30%;
+  margin-left: 30%;
 }
 
 .project-two {
-  padding-left: 50%;
+  margin-left: 50%;
 }
 
 .project-three {
-  padding-left: 70%;
+  margin-left: 70%;
 }
 
 h3.project-title {
@@ -65,8 +71,7 @@ strong {
   display: flex;
   justify-content: space-around;
   /* border: solid; */
-  width: 70%;
-  /* margin: auto; */
+  width: 100%;
 }
 .links button {
   color: white;
@@ -88,69 +93,93 @@ strong {
 .links button:focus {
   outline: none;
 }
-
 @media only screen and (max-width: 1500px) {
   .project-one {
-    padding-left: 30%;
+    /* margin-left: 30%; */
   }
 
   .project-two {
-    padding-left: 60%;
+    margin-left: 55%;
   }
 
   .project-three {
-    padding-left: 80%;
+    margin-left: 80%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .project-one {
+    /* margin-left: 30%; */
+  }
+
+  .project-two {
+    margin-left: 60%;
+  }
+
+  .project-three {
+    margin-left: 90%;
   }
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1264px) {
+  .project-info {
+    width: 40%;
+  }
   .project-one {
-    padding-left: 40%;
+    margin-left: 35%;
   }
 
   .project-two {
-    padding-left: 70%;
+    margin-left: 65%;
   }
 
   .project-three {
-    padding-left: 25%;
+    margin-left: 10%;
   }
 }
 
 @media only screen and (max-width: 1072px) {
+  .project-info {
+    width: 40%;
+  }
+  .project-one {
+    margin-left: 40%;
+  }
   .project-two {
-    padding-left: 80%;
+    margin-left: 75%;
+  }
+  .project-three {
+    margin-left: 25%;
   }
 }
 
-@media only screen and (max-width: 902px) {
+@media only screen and (max-width: 940px) {
+  .project-info {
+    width: 50%;
+  }
   .project-one {
-    padding-left: 50%;
+    margin-left: 45%;
   }
 
   .project-two {
-    padding-left: 90%;
+    margin-left: 80%;
   }
 
   .project-three {
-    padding-left: 25%;
-  }
-  .links {
-    width: 100%;
+    margin-left: 20%;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 860px) {
   .project-two {
-    padding-left: 100%;
+    margin-left: 105%;
   }
 }
 
 @media only screen and (max-width: 675px) {
   .project-info {
-    width: 85%;
     height: auto;
-    padding-left: 10%;
+    width: 80%;
+    margin-left: 0%;
   }
   .project-one {
     top: 0%;
@@ -169,9 +198,7 @@ strong {
   .project-info p {
     font-size: 12px;
   }
-  .links {
-    width: 100%;
-  }
+
   .links button {
     font-size: 12px;
   }
@@ -180,9 +207,6 @@ strong {
 /* IPHONE 11 */
 /*TODO: Disable scrolling within view.*/
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-  .project-info {
-    width: 80%;
-  }
   .project-one {
     top: 60px;
   }
