@@ -121,29 +121,33 @@ button.active:hover {
 }
 
 @media only screen and (max-width: 675px) {
-  .all-projects {
-    overflow: hidden;
-  }
   .projects {
     height: 100%;
   }
-
   .project-menu {
     margin: auto;
     text-align: center;
     margin: 10px;
   }
   .all-projects {
+    overflow: hidden;
     display: block;
     height: auto;
+    padding-bottom: 20px;
+    /* border: solid; */
     margin-bottom: 100px;
   }
   .project-box {
     width: 90%;
     margin: 10px auto 15px auto;
   }
-
   .project-box img {
     width: 100%;
+  }
+  .all-projects {
+    overflow: hidden;
+    display: block;
+    height: auto;
+    margin-bottom: 100px;
   }
 }
