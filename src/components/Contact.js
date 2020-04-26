@@ -79,17 +79,25 @@ class Contact extends Component {
           <div className="bottom-border"></div>
           <div className="message">
             <div className="name">
-              Name: &nbsp;
-              <input type="text" id="name" onChange={this.handleChange} />
+              <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+                onChange={this.handleChange}
+              />
               <span className="error">{formErrors.name}</span>
             </div>
             <div className="email">
-              Email: &nbsp;
-              <input type="email" id="email" onChange={this.handleChange} />
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                onChange={this.handleChange}
+              />
               <span className="error">{formErrors.email}</span>
             </div>
             <div className="body">
-              Message: <br />
+              {/* Message: <br /> */}
               <textarea
                 id="message"
                 placeholder="Write your message here."
