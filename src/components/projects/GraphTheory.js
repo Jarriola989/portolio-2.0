@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faCode, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./ProjectInfo.css";
 
 const GraphTheory = (props) => {
@@ -13,6 +13,11 @@ const GraphTheory = (props) => {
       }
     >
       <h3 className="project-title">Graph Theory</h3>
+      <FontAwesomeIcon
+        icon={faTimes}
+        className="exit-project-info"
+        onClick={props.closeProject}
+      />
       <p>Individual Project (in progress)</p>
       <div className="contributions">
         <strong>Features</strong>

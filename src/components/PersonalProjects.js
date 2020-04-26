@@ -44,7 +44,7 @@ class PersonalProjects extends Component {
         >
           <img src={geekText} alt="geek text web app" />
         </div>
-        <GeekText display={geektext} />
+        <GeekText display={geektext} closeProject={this.closeAllProjects} />
         <div
           className={
             graphtheory ? "project-box bottom select" : "project-box bottom"
@@ -53,14 +53,17 @@ class PersonalProjects extends Component {
         >
           <img src={graphTheory} alt="graph theory web app" />
         </div>
-        <GraphTheory display={graphtheory} />
+        <GraphTheory
+          display={graphtheory}
+          closeProject={this.closeAllProjects}
+        />
         <div
           className={rhaz ? "project-box select" : "project-box"}
           onClick={() => this.selectProject("rhaz")}
         >
           <img src={RHAZ} alt="rhaz game app" />
         </div>
-        <Rhaz display={rhaz} />
+        <Rhaz display={rhaz} closeProject={this.closeAllProjects} />
       </div>
     );
   }

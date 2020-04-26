@@ -13,7 +13,11 @@ const WiseCode = (props) => {
       }
     >
       <h3 className="project-title">WISE Code-Mobile</h3>
-      <FontAwesomeIcon icon={faTimes} className="exit-project-info" />
+      <FontAwesomeIcon
+        icon={faTimes}
+        className="exit-project-info"
+        onClick={props.closeProject}
+      />
       <div className="contributions">
         <strong>My Contributions:</strong>
         <ul>

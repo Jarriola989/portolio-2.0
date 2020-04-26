@@ -40,7 +40,7 @@ class ProfessionalProjects extends Component {
         >
           <img src={wiseCode} alt="wise-code mobile app" />
         </div>
-        <WiseCode display={wisecode} />
+        <WiseCode display={wisecode} closeProject={this.closeAllProjects} />
 
         <div
           className={
@@ -50,7 +50,7 @@ class ProfessionalProjects extends Component {
         >
           <img src={wiseDB} alt="wisedb app" />
         </div>
-        <Wisedb display={wisedb} />
+        <Wisedb display={wisedb} closeProject={this.closeAllProjects} />
       </div>
     );
   }

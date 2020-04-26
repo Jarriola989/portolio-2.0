@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { faEyeSlash, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Wisedb = (props) => {
   return (
@@ -12,6 +12,11 @@ const Wisedb = (props) => {
       }
     >
       <h3 className="project-title">WISEdb</h3>
+      <FontAwesomeIcon
+        icon={faTimes}
+        className="exit-project-info"
+        onClick={props.closeProject}
+      />
       <div className="contributions">
         <strong>My Contributions:</strong>
         <ul>

@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faCode, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./ProjectInfo.css";
 
 const GeekText = (props) => {
@@ -13,7 +13,11 @@ const GeekText = (props) => {
       }
     >
       <h3 className="project-title">Geek Text</h3>
-
+      <FontAwesomeIcon
+        icon={faTimes}
+        className="exit-project-info"
+        onClick={props.closeProject}
+      />
       <div className="contributions">
         <strong>My Contributions:</strong>
         <ul>
