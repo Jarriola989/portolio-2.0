@@ -1,16 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
+.mobile {
+  /* color: white; */
+  /* border: solid; */
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
 .mobile-menu {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 3%;
+  right: 3%;
   color: rgb(187, 187, 187);
   font-size: 30px;
   width: 80px;
   background-color: transparent;
   border: none;
   line-height: 0;
-  z-index: 5;
+  z-index: 0;
   /* border: solid; */
 }
 
@@ -103,25 +114,16 @@
   align-items: center;
   background-color: rgb(41, 41, 41);
   display: grid;
+  grid-template-rows: repeat(5, 1fr);
   top: 0;
   right: 0;
   position: fixed;
   height: 100vh;
   width: 70%;
   z-index: 5;
-
   visibility: visible;
   transition: transform 0.5s ease;
-  /* animation: open-panel 2.5 ease 0s 1 both; */
-}
-
-@keyframes open-panel {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 70%;
-  }
+  /* border: solid; */
 }
 
 .side-panel a {
@@ -131,19 +133,29 @@
 }
 
 .side-panel.hidden {
-  /* visibility: hidden; */
   transform: translateX(100%);
-  /* display: none; */
   transition: transform 0.5s ease;
-  /* transition: all 2.5 ease; */
 }
 .exit-mobile-menu {
   color: white;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 3%;
+  right: 5%;
   font-size: 24px;
   cursor: pointer;
+}
+
+.mobile-overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(63, 63, 63);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.mobile-overlay.hidden {
+  visibility: hidden;
 }
 
 @media only screen and (min-width: 800px) {

@@ -26,7 +26,7 @@ class MobileMenu extends Component {
 
   render() {
     return (
-      <div>
+      <div className="mobile">
         <button className="mobile-menu" onClick={this.openMenu}>
           <div className="mobile-menu-1">
             <FontAwesomeIcon icon={faMinus} className="first-bar" />
@@ -40,6 +40,11 @@ class MobileMenu extends Component {
             <FontAwesomeIcon icon={faMinus} />
           </div>
         </button>
+        <div
+          className={
+            this.state.open ? "mobile-overlay" : "mobile-overlay hidden"
+          }
+        ></div>
         <div className={this.state.open ? "side-panel" : "side-panel hidden"}>
           <FontAwesomeIcon
             icon={faTimes}
