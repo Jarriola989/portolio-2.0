@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   color: rgb(187, 187, 187);
@@ -8,6 +10,7 @@
   background-color: transparent;
   border: none;
   line-height: 0;
+  z-index: 5;
   /* border: solid; */
 }
 
@@ -88,5 +91,63 @@
   }
   100% {
     color: rgb(187, 187, 187);
+  }
+}
+
+/* SIDE PANEL */
+.side-panel {
+  font-size: 30px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  justify-items: center;
+  align-items: center;
+  background-color: rgb(41, 41, 41);
+  display: grid;
+  top: 0;
+  right: 0;
+  position: fixed;
+  height: 100vh;
+  width: 70%;
+  z-index: 5;
+
+  visibility: visible;
+  transition: transform 0.5s ease;
+  /* animation: open-panel 2.5 ease 0s 1 both; */
+}
+
+@keyframes open-panel {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+.side-panel a {
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.side-panel.hidden {
+  /* visibility: hidden; */
+  transform: translateX(100%);
+  /* display: none; */
+  transition: transform 0.5s ease;
+  /* transition: all 2.5 ease; */
+}
+.exit-mobile-menu {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+  .mobile-menu {
+    display: none;
   }
 }
