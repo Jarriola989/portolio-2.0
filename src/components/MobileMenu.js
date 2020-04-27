@@ -53,12 +53,19 @@ class MobileMenu extends Component {
             }
             onClick={this.closeMenu}
           />
+          <div></div>
           <a href={resume} target="_blank" rel="noopener noreferrer">
-            Resume
+            <button onClick={this.closeMenu}>Resume</button>
           </a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#skills">
+            <button onClick={this.closeMenu}>Skills</button>
+          </a>
+          <a href="#projects">
+            <button onClick={this.closeMenu}>Projects</button>
+          </a>
+          <a href="#contact">
+            <button onClick={this.closeMenu}>Contact</button>
+          </a>
         </div>
       </div>
     );
