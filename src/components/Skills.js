@@ -24,6 +24,7 @@ const Skills = () => {
               <span>Typescript</span> &nbsp;
               <span>Java</span> &nbsp;
               <span>GraphQL</span> &nbsp;
+              <span>Python</span> &nbsp;
               <span>C++</span> &nbsp;
               <span>HTML5</span> &nbsp;
               <span>CSS3</span> &nbsp;
@@ -39,6 +40,7 @@ const Skills = () => {
               <span>Springboot</span> &nbsp;
               <span>Prisma</span> &nbsp;
               <span>GraphQLYoga</span> &nbsp;
+              <span>Flask</span> &nbsp;
             </p>
           </div>
           <div className="databases">

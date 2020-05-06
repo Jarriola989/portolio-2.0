@@ -12,6 +12,7 @@
 
 .skills .bottom-border {
   background-color: #da4167;
+  margin-bottom: 75px;
 }
 
 .skills-box {
@@ -23,19 +24,27 @@
   display: grid;
   grid-template-columns: 20% 30% 30% 20%;
   grid-template-rows: repeat(5, 1fr);
-  column-gap: 50px;
+  column-gap: 100px;
+  row-gap: 50px;
   justify-content: center;
   /* align-content: center; */
 }
 
 .skills-box div {
   padding: 20px;
-  /* border: solid; */
+  border: solid thin;
+  border-color: transparent;
   margin: auto;
   width: 90%;
   -webkit-box-shadow: 0px 0px 48px -15px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 48px -15px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 48px -15px rgba(0, 0, 0, 0.75);
+}
+
+.skills-box div:hover {
+  border: solid thin;
+  border-color: #da4167;
+  transition: border-color 0.4s ease;
 }
 
 .skills-box h3 {
