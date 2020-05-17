@@ -18,7 +18,7 @@
 
 h1 {
   font-family: "Righteous", cursive;
-  font-size: 40px;
+  font-size: 4rem;
   color: white;
   text-align: center;
   position: relative;
@@ -26,8 +26,9 @@ h1 {
 }
 
 .project-menu {
-  margin-left: 10%;
+  margin-left: 7.5%;
 }
+
 .project-menu button {
   font-family: "PT Sans", sans-serif;
   color: rgb(199, 199, 199);
@@ -59,13 +60,14 @@ button.active:hover {
 
 .all-projects {
   /* border: solid; */
-  width: 80%;
+  width: 85%;
   margin: auto;
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 2rem;
+  column-gap: 3rem;
   row-gap: 2rem;
+  margin-bottom: 5rem;
 }
 
 .project-box {

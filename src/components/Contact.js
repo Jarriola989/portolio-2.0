@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SyncLoader from "react-spinners/SyncLoader";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+
 import "./Contact.css";
 import ScrollableAnchor from "react-scrollable-anchor";
 
@@ -75,8 +74,7 @@ class Contact extends Component {
     return (
       <ScrollableAnchor id={"contact"}>
         <div className="contact">
-          <h1>Contact</h1>
-          <div className="bottom-border"></div>
+          <h1 className="section-title contact-title">Contact</h1>
           <div className="message">
             <div className="name">
               <input
@@ -108,23 +106,6 @@ class Contact extends Component {
               <SyncLoader color={"#f6d8ae"} loading={this.state.loading} />{" "}
               {this.state.response}
             </div>
-            <a
-              href="https://www.linkedin.com/in/janeth-arriola-a01463158/"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="linkedin"
-            >
-              <FontAwesomeIcon icon={faLinkedin} className="linkedin" />
-            </a>
-
-            <a
-              href="https://github.com/Jarriola989"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="github"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
           </div>
         </div>
       </ScrollableAnchor>
