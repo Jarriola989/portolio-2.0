@@ -97,7 +97,6 @@ class Contact extends Component {
               <span className="error">{formErrors.email}</span>
             </div>
             <div className="body">
-              {/* Message: <br /> */}
               <textarea
                 id="message"
                 placeholder="Write your message here."

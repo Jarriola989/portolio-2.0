@@ -2,32 +2,28 @@
 
 .project-info {
   font-family: "PT Sans", sans-serif;
-  align-content: center;
-  /* border: solid; */
-  width: 30%;
-  height: 100%;
-  position: absolute;
-  display: none;
-  padding: 10px 30px 20px 30px;
-  height: auto;
-  border: solid thin;
+  width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 1rem;
+  padding: 6rem;
+  border: none;
   border-radius: 10px;
-  border-color: rgb(142, 142, 142);
-  /* transition: all 1s; */
+  background-color: rgb(63, 63, 63);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
 }
 
 .display {
-  display: block;
   z-index: 3;
-}
-
-@keyframes display-info {
-  from {
-    display: none;
-  }
-  to {
-    display: block;
-  }
+  visibility: visible;
+  opacity: 1;
 }
 
 .exit-project-info {
@@ -39,40 +35,59 @@
   color: rgb(142, 142, 142);
 }
 
-.project-one {
-  margin-left: 30%;
-}
-
-.project-two {
-  margin-left: 50%;
-}
-
-.project-three {
-  margin-left: 70%;
-}
-
 h3.project-title {
-  font-size: 24px;
+  grid-row: 1 / 2;
+  font-size: 3rem;
+  margin-left: 0;
+  /* border: solid; */
 }
 strong {
   font-size: 18px;
+  color: white;
+  /* margin: 1rem 0; */
+}
+.summary {
+  grid-row: 2 / 3;
+  color: rgb(210, 210, 210);
+  font-size: 1.7rem;
+  /* border: solid; */
+}
+.contributions {
+  color: rgb(210, 210, 210);
+  grid-row: 3 / 4;
+  margin: 1rem 0;
+  /* border: solid; */
+  /* margin: auto; */
 }
 .contributions ul {
   line-height: 2;
+  margin: 0 1.5rem;
+}
+.tech-stack {
+  grid-row: 4 / 5;
+  color: rgb(210, 210, 210);
+  margin-bottom: 1rem;
+  /* border: solid; */
 }
 .tech-stack ul {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 10px;
   list-style: none;
+  margin-top: 1rem;
 }
 
 .links {
-  display: flex;
-  justify-content: space-around;
   /* border: solid; */
-  width: 100%;
+  margin-top: 1rem;
+  grid-row: 5 / 6;
 }
+
+.links a:not(:last-child),
+.links button:not(:last-child) {
+  margin-right: 10rem;
+}
+
 .links button {
   color: white;
   background-color: rgb(57, 57, 57);
@@ -82,7 +97,6 @@ strong {
   min-width: 80px;
   cursor: pointer;
   border-color: rgb(57, 57, 57);
-  margin: 10px;
 }
 .links button.live {
   background-color: #94a6bb;
@@ -92,116 +106,6 @@ strong {
 }
 .links button:focus {
   outline: none;
-}
-@media only screen and (max-width: 1500px) {
-  .project-one {
-    /* margin-left: 30%; */
-  }
-
-  .project-two {
-    margin-left: 55%;
-  }
-
-  .project-three {
-    margin-left: 80%;
-  }
-}
-@media only screen and (max-width: 1400px) {
-  .project-one {
-    /* margin-left: 30%; */
-  }
-
-  .project-two {
-    margin-left: 60%;
-  }
-
-  .project-three {
-    margin-left: 90%;
-  }
-}
-
-@media only screen and (max-width: 1264px) {
-  .project-info {
-    width: 40%;
-  }
-  .project-one {
-    margin-left: 35%;
-  }
-
-  .project-two {
-    margin-left: 65%;
-  }
-
-  .project-three {
-    margin-left: 10%;
-  }
-}
-
-@media only screen and (max-width: 1072px) {
-  .project-info {
-    width: 40%;
-  }
-  .project-one {
-    margin-left: 40%;
-  }
-  .project-two {
-    margin-left: 75%;
-  }
-  .project-three {
-    margin-left: 25%;
-  }
-}
-
-@media only screen and (max-width: 940px) {
-  .project-info {
-    width: 50%;
-  }
-  .project-one {
-    margin-left: 45%;
-  }
-
-  .project-two {
-    margin-left: 80%;
-  }
-
-  .project-three {
-    margin-left: 20%;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .project-two {
-    margin-left: 105%;
-  }
-}
-
-@media only screen and (max-width: 675px) {
-  .project-info {
-    height: auto;
-    width: 80%;
-    margin-left: 0%;
-  }
-  .project-one {
-    top: 0%;
-  }
-
-  .project-two {
-    top: 600px;
-  }
-
-  .project-three {
-    top: 1200px;
-  }
-  .contributions ul {
-    line-height: 1.5;
-  }
-  .project-info p {
-    font-size: 12px;
-  }
-
-  .links button {
-    font-size: 12px;
-  }
 }
 
 /* IPHONE 11 */

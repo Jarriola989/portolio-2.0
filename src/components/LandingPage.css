@@ -18,7 +18,7 @@ body {
 
 .block {
   position: absolute;
-  width: 40%;
+  width: 45%;
   height: 20%;
   font-family: "Righteous", cursive;
   font-size: 75px;
@@ -26,18 +26,21 @@ body {
   align-items: center;
   justify-content: center;
   color: rgb(41, 41, 41);
-  animation: box-grow 2s ease 0.5s 1 both;
+  border-radius: 3px;
   -webkit-animation: box-grow 2s ease 0.5s 1 both;
   -moz-animation: box-grow 2s ease 0.5s 1 both;
-  -webkit-box-shadow: 0px 0px 16px -2px rgb(41, 41, 41);
-  -moz-box-shadow: 0px 0px 16px -2px rgb(41, 41, 41);
-  box-shadow: 0px 0px 16px -2px rgb(41, 41, 41);
+  animation: box-grow 2s ease 0.5s 1 both;
+  -webkit-box-shadow: -10px -10px 16px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -10px -10px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: -10px -10px 16px rgba(0, 0, 0, 0.2);
 }
 
 .one {
   background-color: #da4167;
   top: 22%;
   left: 20%;
+  overflow: visible;
+  white-space: nowrap;
 }
 
 .two {
@@ -57,7 +60,42 @@ body {
     width: 0%;
   }
   to {
-    width: 40%;
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .block {
+    width: 65%;
+  }
+  .one {
+    left: 10%;
+  }
+  .two {
+    left: 25%;
+  }
+  .three {
+    left: 15%;
+  }
+  @keyframes box-grow {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 65%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .nav-block {
+    right: 3%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .nav-block {
+    right: 5%;
   }
 }
 
@@ -82,17 +120,5 @@ body {
     to {
       width: 90%;
     }
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  .nav-block {
-    right: 3%;
-  }
-}
-
-@media only screen and (max-width: 950px) {
-  .nav-block {
-    right: 5%;
   }
 }

@@ -13,8 +13,7 @@ const Skills = () => {
   return (
     <ScrollableAnchor id={"skills"}>
       <div className="skills">
-        <h1>Skills</h1>
-        <div className="bottom-border"></div>
+        <h1 className="section-title">Skills</h1>
         <div className="skills-box">
           <div className="languages">
             <FontAwesomeIcon icon={faCode} className="skill-icon" />
@@ -28,6 +27,7 @@ const Skills = () => {
               <span>C++</span> &nbsp;
               <span>HTML5</span> &nbsp;
               <span>CSS3</span> &nbsp;
+              <span>SASS</span> &nbsp;
             </p>
           </div>
           <div className="frameworks">

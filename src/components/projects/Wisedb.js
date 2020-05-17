@@ -17,11 +17,17 @@ const Wisedb = (props) => {
         className="exit-project-info"
         onClick={props.closeProject}
       />
+      <div className="summary">
+        WISEdb is a data management app that allows a team of data analysts to
+        easily parse and match validated ingredients to thousands of recipes and
+        foods. This allows the team to have a complete and accurate nutrient
+        profile on hundreds of thousands of foods eaten daily by Americans.
+      </div>
       <div className="contributions">
         <strong>My Contributions:</strong>
         <ul>
           <li>Designed/implemented features to parse and match data.</li>
-          <li>Scripts to efficiently find/fix faulty data.</li>
+          <li>Data migrations for multiple app versions and schema changes</li>
         </ul>
       </div>
       <div className="tech-stack">

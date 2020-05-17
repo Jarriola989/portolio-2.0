@@ -33,35 +33,42 @@ class PersonalProjects extends Component {
       <div className="all-projects">
         <div
           className={
-            geektext || graphtheory || rhaz ? "overlay top" : "overlay"
+            geektext || graphtheory || rhaz ? "overlay show" : "overlay"
           }
           onClick={this.closeAllProjects}
         ></div>
 
-        <div
-          className={geektext ? "project-box select" : "project-box"}
-          onClick={() => this.selectProject("geektext")}
-        >
+        <div className="project-box">
           <img src={geekText} alt="geek text web app" />
+          <div className="project-details">
+            <div className="project-title">Geek Text</div>
+            <button onClick={() => this.selectProject("geektext")}>
+              More info
+            </button>
+          </div>
         </div>
         <GeekText display={geektext} closeProject={this.closeAllProjects} />
-        <div
-          className={
-            graphtheory ? "project-box bottom select" : "project-box bottom"
-          }
-          onClick={() => this.selectProject("graphtheory")}
-        >
+        <div className="project-box">
           <img src={graphTheory} alt="graph theory web app" />
+          <div className="project-details">
+            <div className="project-title">Graph Theory</div>
+            <button onClick={() => this.selectProject("graphtheory")}>
+              More info
+            </button>
+          </div>
         </div>
         <GraphTheory
           display={graphtheory}
           closeProject={this.closeAllProjects}
         />
-        <div
-          className={rhaz ? "project-box select" : "project-box"}
-          onClick={() => this.selectProject("rhaz")}
-        >
+        <div className="project-box">
           <img src={RHAZ} alt="rhaz game app" />
+          <div className="project-details">
+            <div className="project-title">RHAZ</div>
+            <button onClick={() => this.selectProject("rhaz")}>
+              More info
+            </button>
+          </div>
         </div>
         <Rhaz display={rhaz} closeProject={this.closeAllProjects} />
       </div>

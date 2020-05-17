@@ -5,19 +5,17 @@ import "./ProjectInfo.css";
 
 const GeekText = (props) => {
   return (
-    <div
-      className={
-        props.display
-          ? "project-info project-one display"
-          : "project-info project-one"
-      }
-    >
+    <div className={props.display ? "project-info display" : "project-info"}>
       <h3 className="project-title">Geek Text</h3>
       <FontAwesomeIcon
         icon={faTimes}
         className="exit-project-info"
         onClick={props.closeProject}
       />
+      <div className="summary">
+        Geek Text is a bookstore app for all of your favorite Computer Science
+        books.
+      </div>
       <div className="contributions">
         <strong>My Contributions:</strong>
         <ul>

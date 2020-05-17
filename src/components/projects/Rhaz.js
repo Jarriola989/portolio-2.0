@@ -4,19 +4,18 @@ import { faLink, faCode, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Rhaz = (props) => {
   return (
-    <div
-      className={
-        props.display
-          ? "project-info project-three display"
-          : "project-info project-three"
-      }
-    >
+    <div className={props.display ? "project-info display" : "project-info"}>
       <h3 className="project-title">RHAZ</h3>
       <FontAwesomeIcon
         icon={faTimes}
         className="exit-project-info"
         onClick={props.closeProject}
       />
+      <div className="summary">
+        RHAZ was completed during Global Game Jam 2020, a 36hr gaming hackathon.
+        The theme was 'repair' and our austronaut must repair his ship by
+        killing aliens and collecting their mechanical orbs.
+      </div>
       <div className="contributions">
         <strong>My Contributions:</strong>
         <ul>

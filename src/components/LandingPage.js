@@ -20,9 +20,9 @@ class LandingPage extends Component {
   render() {
     return (
       <div className="landing">
-        <div className="block one">Janeth</div>
-        <div className="block two">Arriola's</div>
-        <div className="block three">Portfolio</div>
+        <div className="block one">Janeth Arriola</div>
+        <div className="block two">Software</div>
+        <div className="block three">Developer</div>
       </div>
     );
   }

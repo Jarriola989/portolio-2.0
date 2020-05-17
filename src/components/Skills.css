@@ -3,62 +3,72 @@
 .skills {
   font-family: "PT Sans", sans-serif;
   position: relative;
-  height: 100%;
+  /* height: 100%; */
   /* border: solid; */
   color: white;
-  padding: 50px 0px 100px 0px;
+  padding: 5rem 0px 10rem 0px;
   background-color: rgb(52, 52, 52);
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(217, 63, 102) 0%,
+    rgb(217, 63, 102) 50%,
+    transparent 50%
+  );
 }
 
-.skills .bottom-border {
-  background-color: #da4167;
-  margin-bottom: 75px;
+.section-title {
+  color: rgb(52, 52, 52);
+  font-size: 7rem;
+  margin-bottom: 6rem;
+  text-transform: uppercase;
 }
 
 .skills-box {
   /* border: solid; */
-  width: 80%;
+  width: 85%;
   height: 70%;
   margin: auto;
-  margin-top: 40px;
   display: grid;
   grid-template-columns: 20% 30% 30% 20%;
   grid-template-rows: repeat(5, 1fr);
-  column-gap: 100px;
-  row-gap: 50px;
+  column-gap: 10rem;
+  row-gap: 5rem;
   justify-content: center;
-  /* align-content: center; */
 }
 
 .skills-box div {
-  padding: 20px;
+  padding: 3rem;
+  border-radius: 3px;
   border: solid thin;
   border-color: transparent;
   margin: auto;
   width: 90%;
+  background-color: rgba(52, 52, 52, 0.8);
   -webkit-box-shadow: 0px 0px 48px -15px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 48px -15px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 48px -15px rgba(0, 0, 0, 0.75);
+  transition: all 0.4s ease;
 }
 
 .skills-box div:hover {
-  border: solid thin;
-  border-color: #da4167;
-  transition: border-color 0.4s ease;
+  /* border: solid thin; */
+  /* border-color: #da4167; */
+  transform: scale(1.1) translateY(-8%);
+  box-shadow: 0px 10px 58px -15px rgba(0, 0, 0, 0.75);
 }
 
 .skills-box h3 {
   color: #da4167;
   text-align: center;
-  font-size: 22px;
+  font-size: 2.2rem;
+  margin: 1.5rem 0;
 }
 
 .skill-icon {
-  font-size: 36px;
+  font-size: 3.6rem;
   margin-left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  margin-top: 10px;
   position: relative;
 }
 
@@ -87,7 +97,7 @@
 }
 
 .skills-box p span {
-  padding: 3px 10px 3px 10px;
+  padding: 5px 10px;
   line-height: 2;
   background-color: rgb(75, 75, 75);
   border-radius: 5px;

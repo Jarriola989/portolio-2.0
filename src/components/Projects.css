@@ -3,11 +3,17 @@
 
 .projects {
   position: relative;
-  height: 100vh;
+  height: 100%;
   /* border: solid; */
   color: white;
   padding: 50px 0px 100px 0px;
   background-color: rgb(63, 63, 63);
+  background-image: linear-gradient(
+    to left bottom,
+    #94a6bb 0%,
+    #94a6bb 50%,
+    transparent 50%
+  );
 }
 
 h1 {
@@ -17,13 +23,6 @@ h1 {
   text-align: center;
   position: relative;
   margin-top: 5%;
-}
-
-.bottom-border {
-  background-color: #94a6bb;
-  width: 200px;
-  height: 40px;
-  margin: auto;
 }
 
 .project-menu {
@@ -61,66 +60,126 @@ button.active:hover {
 .all-projects {
   /* border: solid; */
   width: 80%;
-  height: 60%;
   margin: auto;
-  margin-top: 10px;
-  display: flex;
-  position: relative;
-  overflow-x: scroll;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
 }
 
 .project-box {
-  height: 90%;
-  margin: 0px 10px 0px 10px;
-  cursor: pointer;
+  height: 50rem;
   z-index: 1;
+  /* border: solid; */
+  text-align: center;
+  border-radius: 3px;
+  background-color: white;
+  background-image: linear-gradient(
+    to right bottom,
+    #94a6bb 0%,
+    rgb(63, 63, 63)
+  );
+  padding: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 .select {
   z-index: 4;
 }
 
+.project-box:hover img {
+  filter: blur(3px) brightness(80%);
+}
+
+.project-box:hover .project-details {
+  opacity: 1;
+  visibility: visible;
+}
 .project-box img {
   height: 100%;
-  object-fit: cover;
-  opacity: 0.7;
+  border-radius: 3px;
+  opacity: 0.9;
   transition: all 0.5s;
+}
+
+.project-details {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "PT Sans", sans-serif;
+  font-size: 4rem;
+  transition: all 0.4s;
+  color: rgb(63, 63, 63);
+}
+
+.project-title {
+  margin: 1rem;
+}
+
+.project-details button {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  /* background-color: transparent; */
+  background-color: rgba(148, 166, 187);
+  color: white;
+  /* font-weight: bold; */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.project-details button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+.project-details button:focus {
+  outline: none;
+  transform: translateY(0px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .select img {
   opacity: 1;
 }
 
-.project-box img:hover {
-  opacity: 1;
-}
-
-.bottom {
-  margin-top: auto;
-  margin-bottom: 0px;
-}
-
 .overlay {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
   background-color: rgb(63, 63, 63);
-  opacity: 0.9;
+  opacity: 0;
+  visibility: hidden;
   z-index: 0;
-  /* transition: all 0.5s ease; */
+  transition: all 0.4s;
 }
-
-.top {
-  z-index: 2;
+.show {
+  opacity: 0.7;
+  z-index: 3;
+  visibility: visible;
 }
 
 @media only screen and (max-width: 1250px) {
   .overlay {
     width: 150%;
   }
+  .all-projects {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+  }
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 800px) {
   .projects {
     height: 100%;
   }
@@ -130,24 +189,17 @@ button.active:hover {
     margin: 10px;
   }
   .all-projects {
-    overflow: hidden;
-    display: block;
-    height: auto;
-    padding-bottom: 20px;
-    /* border: solid; */
-    margin-bottom: 100px;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
   }
   .project-box {
     width: 90%;
     margin: 10px auto 15px auto;
   }
-  .project-box img {
-    width: 100%;
-  }
   .all-projects {
     overflow: hidden;
     display: block;
     height: auto;
-    margin-bottom: 100px;
+    margin-bottom: 10rem;
   }
 }

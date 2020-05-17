@@ -5,24 +5,24 @@ import "./ProjectInfo.css";
 
 const WiseCode = (props) => {
   return (
-    <div
-      className={
-        props.display
-          ? "project-info project-one display"
-          : "project-info project-one"
-      }
-    >
+    <div className={props.display ? "project-info display" : "project-info"}>
       <h3 className="project-title">WISE Code-Mobile</h3>
       <FontAwesomeIcon
         icon={faTimes}
         className="exit-project-info"
         onClick={props.closeProject}
       />
+      <div className="summary">
+        WISE Code allows users to track meals through a point system. A user has
+        a goal to meet per day and each meal or food either positively or
+        negatively impacts the total point. The nutritional information from
+        each food is pulled directliy from WISEdb.
+      </div>
       <div className="contributions">
         <strong>My Contributions:</strong>
         <ul>
           <li>
-            Node/Graphql API for data management app (WiseDB) used by WiseCode.
+            Node/Graphql API for data management app (WISEdb) used by WiseCode.
           </li>
         </ul>
       </div>

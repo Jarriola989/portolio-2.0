@@ -31,8 +31,7 @@ class Projects extends Component {
     return (
       <ScrollableAnchor id={"projects"}>
         <div className="projects">
-          <h1>Projects</h1>
-          <div className="bottom-border"></div>
+          <h1 className="section-title">Projects</h1>
           <div className="project-menu">
             <button
               className={this.state.professional ? "active" : ""}
