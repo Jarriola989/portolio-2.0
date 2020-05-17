@@ -5,6 +5,9 @@ import graphTheory from "../images/graphtheory.png";
 import RHAZ from "../images/rhaz.png";
 import Rhaz from "./projects/Rhaz";
 import GraphTheory from "./projects/GraphTheory";
+import greenTours from "../images/green-tours.png";
+import GreenTours from "./projects/GreenTours";
+
 class PersonalProjects extends Component {
   constructor() {
     super();
@@ -12,6 +15,7 @@ class PersonalProjects extends Component {
       geektext: false,
       graphtheory: false,
       rhaz: false,
+      greentours: false,
     };
   }
 
@@ -24,16 +28,23 @@ class PersonalProjects extends Component {
   };
 
   closeAllProjects = () => {
-    this.setState({ geektext: false, graphtheory: false, rhaz: false });
+    this.setState({
+      geektext: false,
+      graphtheory: false,
+      rhaz: false,
+      greentours: false,
+    });
   };
 
   render() {
-    const { geektext, graphtheory, rhaz } = this.state;
+    const { geektext, graphtheory, rhaz, greentours } = this.state;
     return (
       <div className="all-projects">
         <div
           className={
-            geektext || graphtheory || rhaz ? "overlay show" : "overlay"
+            geektext || graphtheory || rhaz || greentours
+              ? "overlay show"
+              : "overlay"
           }
           onClick={this.closeAllProjects}
         ></div>
@@ -41,7 +52,7 @@ class PersonalProjects extends Component {
         <div className="project-box">
           <img src={geekText} alt="geek text web app" />
           <div className="project-details">
-            <div className="project-title">Geek Text</div>
+            <div className="project-title white">Geek Text</div>
             <button onClick={() => this.selectProject("geektext")}>
               More info
             </button>
@@ -62,9 +73,19 @@ class PersonalProjects extends Component {
           closeProject={this.closeAllProjects}
         />
         <div className="project-box">
+          <img src={greenTours} alt="green tours project" />
+          <div className="project-details">
+            <div className="project-title white">Green Tours</div>
+            <button onClick={() => this.selectProject("greentours")}>
+              More info
+            </button>
+          </div>
+        </div>
+        <GreenTours display={greentours} closeProject={this.closeAllProjects} />
+        <div className="project-box">
           <img src={RHAZ} alt="rhaz game app" />
           <div className="project-details">
-            <div className="project-title">RHAZ</div>
+            <div className="project-title white">RHAZ</div>
             <button onClick={() => this.selectProject("rhaz")}>
               More info
             </button>
