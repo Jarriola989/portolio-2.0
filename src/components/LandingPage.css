@@ -21,7 +21,7 @@ body {
   width: 45%;
   height: 20%;
   font-family: "Righteous", cursive;
-  font-size: 75px;
+  font-size: 7.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,5 +120,11 @@ body {
     to {
       width: 90%;
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .block {
+    font-size: 5.5rem;
   }
 }
