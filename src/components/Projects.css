@@ -190,6 +190,14 @@ button.active:hover {
     text-align: center;
     margin: 10px;
   }
+
+  .project-menu button {
+    color: rgb(74, 78, 84);
+  }
+  button.active {
+    color: rgb(199, 199, 199);
+  }
+
   .all-projects {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;

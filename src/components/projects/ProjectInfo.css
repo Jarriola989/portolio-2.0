@@ -108,47 +108,15 @@ strong {
   outline: none;
 }
 
-/* IPHONE 11 */
-/*TODO: Disable scrolling within view.*/
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-  .project-one {
-    top: 60px;
-  }
-  .project-two {
-    top: 570px;
-  }
-
-  .project-three {
-    top: 1100px;
+@media only screen and (max-width: 700px) {
+  .project-info {
+    width: 80%;
   }
 }
 
-/* TODO: IPHONE11 PRO */
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-}
-
-/* TODO: IPHONE11 PRO MAX*/
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
-}
-
-/* TODO: IPHONE XR - 1792x828px at 326ppi */
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-}
-
-/* IPHONE XS - 2436x1125px at 458ppi */
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .project-one {
-    top: 30px;
+@media only screen and (max-width: 500px) {
+  .project-info {
+    width: 95%;
+    height: 90%;
   }
-  .project-two {
-    top: 510px;
-  }
-
-  .project-three {
-    top: 1000px;
-  }
-}
-
-/* TODO: IPHONE XS MAX 2688x1242px at 458ppi */
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
 }
