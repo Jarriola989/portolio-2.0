@@ -87,10 +87,6 @@ button.active:hover {
   position: relative;
 }
 
-.select {
-  z-index: 4;
-}
-
 .project-box:hover img {
   filter: blur(3px) brightness(80%);
 }
@@ -101,9 +97,15 @@ button.active:hover {
 }
 .project-box img {
   height: 100%;
+  width: 100%;
   border-radius: 3px;
   opacity: 0.9;
   transition: all 0.5s;
+  object-fit: cover;
+}
+
+.mobile-app {
+  object-fit: contain !important;
 }
 
 .project-details {
@@ -121,6 +123,10 @@ button.active:hover {
 
 .project-title {
   margin: 1rem;
+}
+
+.white {
+  color: white;
 }
 
 .project-details button {

@@ -35,7 +35,11 @@ class ProfessionalProjects extends Component {
         ></div>
 
         <div className="project-box">
-          <img src={wiseCode} alt="wise-code mobile app" />
+          <img
+            src={wiseCode}
+            alt="wise-code mobile app"
+            className="mobile-app"
+          />
           <div className="project-details">
             <div className="project-title">WISE Code</div>
             <button onClick={() => this.selectProject("wisecode")}>
