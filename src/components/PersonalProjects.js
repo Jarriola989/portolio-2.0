@@ -7,6 +7,8 @@ import Rhaz from "./projects/Rhaz";
 import GraphTheory from "./projects/GraphTheory";
 import greenTours from "../images/green-tours.png";
 import GreenTours from "./projects/GreenTours";
+import hackerTracker from "../images/hacker-tracker.png";
+import HackerTracker from "./projects/HackerTracker";
 
 class PersonalProjects extends Component {
   constructor() {
@@ -16,6 +18,7 @@ class PersonalProjects extends Component {
       graphtheory: false,
       rhaz: false,
       greentours: false,
+      hackertracker: false,
     };
   }
 
@@ -33,16 +36,23 @@ class PersonalProjects extends Component {
       graphtheory: false,
       rhaz: false,
       greentours: false,
+      hackertracker: false,
     });
   };
 
   render() {
-    const { geektext, graphtheory, rhaz, greentours } = this.state;
+    const {
+      geektext,
+      graphtheory,
+      rhaz,
+      greentours,
+      hackertracker,
+    } = this.state;
     return (
       <div className="all-projects">
         <div
           className={
-            geektext || graphtheory || rhaz || greentours
+            geektext || graphtheory || rhaz || greentours || hackertracker
               ? "overlay show"
               : "overlay"
           }
@@ -82,6 +92,19 @@ class PersonalProjects extends Component {
           </div>
         </div>
         <GreenTours display={greentours} closeProject={this.closeAllProjects} />
+        <div className="project-box">
+          <img src={hackerTracker} alt="hacker tracker app" />
+          <div className="project-details">
+            <div className="project-title white">Hacker Tracker</div>
+            <button onClick={() => this.selectProject("hackertracker")}>
+              More info
+            </button>
+          </div>
+        </div>
+        <HackerTracker
+          display={hackertracker}
+          closeProject={this.closeAllProjects}
+        />
         <div className="project-box">
           <img src={RHAZ} alt="rhaz game app" />
           <div className="project-details">

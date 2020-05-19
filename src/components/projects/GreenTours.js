@@ -16,10 +16,7 @@ const GreenTours = (props) => {
         tours.
       </div>
       <div className="contributions">
-        <strong>My Contributions:</strong>
-        <ul>
-          <li>Individual Project.</li>
-        </ul>
+        <strong>Individual Project</strong>
       </div>
       <div className="tech-stack">
         <strong>Stack:</strong>
