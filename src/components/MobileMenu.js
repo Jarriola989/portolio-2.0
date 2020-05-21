@@ -28,17 +28,18 @@ class MobileMenu extends Component {
     return (
       <div className="mobile">
         <button className="mobile-menu" onClick={this.openMenu}>
-          <div className="mobile-menu-1">
-            <FontAwesomeIcon icon={faMinus} className="first-bar" />
-            <FontAwesomeIcon icon={faMinus} className="second-bar" />
-          </div>
-          <div className="mobile-menu-2">
+          <span className="mobile-menu-bar">
+            &nbsp;
+            {/* <FontAwesomeIcon icon={faMinus} className="first-bar" />
+            <FontAwesomeIcon icon={faMinus} className="second-bar" /> */}
+          </span>
+          {/* <div className="mobile-menu-2">
             <FontAwesomeIcon icon={faMinus} className="first-bar" />
             <FontAwesomeIcon icon={faMinus} className="second-bar" />
           </div>
           <div className="mobile-menu-3">
             <FontAwesomeIcon icon={faMinus} />
-          </div>
+          </div> */}
         </button>
         <div
           className={
