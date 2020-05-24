@@ -27,46 +27,20 @@ class MobileMenu extends Component {
   render() {
     return (
       <div className="mobile">
-        <button className="mobile-menu" onClick={this.openMenu}>
-          <span className="mobile-menu-bar">
-            &nbsp;
-            {/* <FontAwesomeIcon icon={faMinus} className="first-bar" />
-            <FontAwesomeIcon icon={faMinus} className="second-bar" /> */}
-          </span>
-          {/* <div className="mobile-menu-2">
-            <FontAwesomeIcon icon={faMinus} className="first-bar" />
-            <FontAwesomeIcon icon={faMinus} className="second-bar" />
-          </div>
-          <div className="mobile-menu-3">
-            <FontAwesomeIcon icon={faMinus} />
-          </div> */}
-        </button>
-        <div
-          className={
-            this.state.open ? "mobile-overlay" : "mobile-overlay hidden"
-          }
-        ></div>
-        <div className={this.state.open ? "side-panel" : "side-panel hidden"}>
-          <FontAwesomeIcon
-            icon={faTimes}
-            className={
-              this.state.open ? "exit-mobile-menu" : "exit-mobile-menu hidden"
-            }
-            onClick={this.closeMenu}
-          />
+        <input type="checkbox" id="menu" class="menu-checkbox" />
+        <label for="menu" className="mobile-menu">
+          <span className="mobile-menu-bar"></span>
+          <span className="exit-menu-bar"></span>
+        </label>
+
+        <div className="side-panel">
           <div></div>
           <a href={resume} target="_blank" rel="noopener noreferrer">
-            <button onClick={this.closeMenu}>Resume</button>
+            Resume
           </a>
-          <a href="#skills">
-            <button onClick={this.closeMenu}>Skills</button>
-          </a>
-          <a href="#projects">
-            <button onClick={this.closeMenu}>Projects</button>
-          </a>
-          <a href="#contact">
-            <button onClick={this.closeMenu}>Contact</button>
-          </a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     );
