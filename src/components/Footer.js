@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
 import repl from "../images/repl-icon.png";
 import trello from "../images/trello-icon.png";
@@ -25,7 +25,6 @@ const Footer = () => {
           target="_blank"
         >
           <img src={linkedin} alt="linkedin icon" className="icon-img" />
-          {/* <FontAwesomeIcon icon={faLinkedin} className="linkedin" /> */}
         </a>
 
         <a

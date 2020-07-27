@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+import milkyway from "../images/milkyway.mp4";
 import "./LandingPage.css";
 
 class LandingPage extends Component {
@@ -19,11 +23,21 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className="landing">
-        <div className="block one">Janeth Arriola</div>
-        <div className="block two">Software</div>
-        <div className="block three">Developer</div>
-      </div>
+      <section className="section-landing">
+        <video className="bg-video__content" autoPlay loop>
+          <source src={milkyway} type="video/mp4" />
+          Your browser is not supported!
+        </video>
+        <div className="landing--intro">
+          Hi, I'm <span className="pink">Janeth Arriola</span>
+          <br />
+          Software Engineer
+          <br />
+          <button className="landing--btn">
+            View My Work &nbsp; <FontAwesomeIcon icon={faArrowRight} />
+          </button>
+        </div>
+      </section>
     );
   }
 }

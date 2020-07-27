@@ -6,13 +6,15 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import MobileMenu from "./components/MobileMenu";
 import Footer from "./components/Footer";
+import MyProfiles from "./components/MyProfiles";
 
 function App() {
   return (
     <div>
       <LandingPage />
+      <MyProfiles />
       {/* <Navbar /> */}
-      <MobileMenu />
+      {/* <MobileMenu /> */}
       <Skills />
       <Projects />
       <Contact />

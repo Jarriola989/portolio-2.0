@@ -27,7 +27,7 @@ class MobileMenu extends Component {
   render() {
     return (
       <div className="mobile">
-        <input type="checkbox" id="menu" class="menu-checkbox" />
+        <input type="checkbox" id="menu" className="menu-checkbox" />
         <label for="menu" className="mobile-menu">
           <span className="mobile-menu-bar"></span>
           <span className="exit-menu-bar"></span>

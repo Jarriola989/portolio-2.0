@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
 .projects {
@@ -7,22 +6,8 @@
   /* border: solid; */
   color: white;
   padding: 50px 0px 100px 0px;
-  background-color: rgb(63, 63, 63);
-  background-image: linear-gradient(
-    to left bottom,
-    #94a6bb 0%,
-    #94a6bb 50%,
-    transparent 50%
-  );
-}
-
-h1 {
-  font-family: "Righteous", cursive;
-  font-size: 4rem;
-  color: white;
-  text-align: center;
-  position: relative;
-  margin-top: 5%;
+  background-color: rgb(67, 70, 86);
+  font-family: "Montserrat", sans-serif;
 }
 
 .project-menu {
@@ -30,7 +15,7 @@ h1 {
 }
 
 .project-menu button {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: rgb(199, 199, 199);
   background-color: transparent;
   font-size: 18px;
@@ -58,33 +43,75 @@ button.active:hover {
 
 /********** Project Display **********/
 
-.all-projects {
+.project--display {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10rem;
   /* border: solid; */
-  width: 85%;
-  margin: auto;
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 3rem;
-  row-gap: 2rem;
-  margin-bottom: 5rem;
+  justify-content: center;
 }
 
-.project-box {
-  height: 50rem;
-  z-index: 1;
-  /* border: solid; */
-  text-align: center;
+.project--container {
+  width: 40rem;
+  height: 40rem;
   border-radius: 3px;
-  background-color: white;
-  background-image: linear-gradient(
-    to right bottom,
-    #94a6bb 0%,
-    rgb(63, 63, 63)
-  );
-  padding: 2rem;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  margin: 2rem;
+  cursor: pointer;
+  box-shadow: 4px 15px 20px rgba(0, 0, 0, 0.3);
   position: relative;
+}
+
+.project--container-overlay {
+  /* border: solid; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  /* background-color: white; */
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.8) 50%
+  );
+  background-size: 270%;
+  transition: 0.3s all ease;
+}
+
+.project--container-overlay:hover {
+  background-position: 100%;
+}
+
+.project--btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background-color: rgb(37, 39, 51);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  z-index: 20;
+  opacity: 0;
+  transition: 0.5s all ease 0.2s;
+}
+
+/* TODO: button is fading out after white stuff */
+.project--container-overlay:hover .project--btn {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.project--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  z-index: 0;
 }
 
 .project-box:hover img {
@@ -94,14 +121,6 @@ button.active:hover {
 .project-box:hover .project-details {
   opacity: 1;
   visibility: visible;
-}
-.project-box img {
-  height: 100%;
-  width: 100%;
-  border-radius: 3px;
-  opacity: 0.9;
-  transition: all 0.5s;
-  object-fit: cover;
 }
 
 .mobile-app {

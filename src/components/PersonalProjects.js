@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import GeekText from "./projects/GeekText";
-import geekText from "../images/geektext.png";
+
 import graphTheory from "../images/graphtheory.png";
 import RHAZ from "../images/rhaz.png";
 import Rhaz from "./projects/Rhaz";
 import GraphTheory from "./projects/GraphTheory";
-import greenTours from "../images/green-tours.png";
-import GreenTours from "./projects/GreenTours";
 import hackerTracker from "../images/hacker-tracker.png";
 import HackerTracker from "./projects/HackerTracker";
+import { PROJECTS } from "../projects";
+import { PROJECT_TYPE } from "../constants";
 
 class PersonalProjects extends Component {
   constructor() {
@@ -49,7 +48,7 @@ class PersonalProjects extends Component {
       hackertracker,
     } = this.state;
     return (
-      <div className="all-projects">
+      <div className="project--display">
         <div
           className={
             geektext || graphtheory || rhaz || greentours || hackertracker
@@ -58,18 +57,26 @@ class PersonalProjects extends Component {
           }
           onClick={this.closeAllProjects}
         ></div>
+        {Object.keys(PROJECTS)
+          .filter((key) => PROJECTS[key].type === PROJECT_TYPE.personal)
+          .map((key) => {
+            const firstImage = PROJECTS[key].images["image1"].src;
+            const altMessage = PROJECTS[key].images["image1"].alt;
+            return (
+              <div className="project--container" key={key}>
+                <img
+                  className="project--img"
+                  src={firstImage}
+                  alt={altMessage}
+                />
+                <div className="project--container-overlay">
+                  <button className="project--btn">Learn More</button>
+                </div>
+              </div>
+            );
+          })}
 
-        <div className="project-box">
-          <img src={geekText} alt="geek text web app" />
-          <div className="project-details">
-            <div className="project-title white">Geek Text</div>
-            <button onClick={() => this.selectProject("geektext")}>
-              More info
-            </button>
-          </div>
-        </div>
-        <GeekText display={geektext} closeProject={this.closeAllProjects} />
-        <div className="project-box">
+        {/* <div className="project-box">
           <img src={graphTheory} alt="graph theory web app" />
           <div className="project-details">
             <div className="project-title">Graph Theory</div>
@@ -81,40 +88,7 @@ class PersonalProjects extends Component {
         <GraphTheory
           display={graphtheory}
           closeProject={this.closeAllProjects}
-        />
-        <div className="project-box">
-          <img src={greenTours} alt="green tours project" />
-          <div className="project-details">
-            <div className="project-title white">Green Tours</div>
-            <button onClick={() => this.selectProject("greentours")}>
-              More info
-            </button>
-          </div>
-        </div>
-        <GreenTours display={greentours} closeProject={this.closeAllProjects} />
-        <div className="project-box">
-          <img src={hackerTracker} alt="hacker tracker app" />
-          <div className="project-details">
-            <div className="project-title white">Hacker Tracker</div>
-            <button onClick={() => this.selectProject("hackertracker")}>
-              More info
-            </button>
-          </div>
-        </div>
-        <HackerTracker
-          display={hackertracker}
-          closeProject={this.closeAllProjects}
-        />
-        <div className="project-box">
-          <img src={RHAZ} alt="rhaz game app" />
-          <div className="project-details">
-            <div className="project-title white">RHAZ</div>
-            <button onClick={() => this.selectProject("rhaz")}>
-              More info
-            </button>
-          </div>
-        </div>
-        <Rhaz display={rhaz} closeProject={this.closeAllProjects} />
+        /> */}
       </div>
     );
   }

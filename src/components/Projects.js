@@ -8,8 +8,8 @@ class Projects extends Component {
   constructor() {
     super();
     this.state = {
-      professional: true,
-      personal: false,
+      professional: false,
+      personal: true,
     };
   }
 
@@ -31,19 +31,19 @@ class Projects extends Component {
     return (
       <ScrollableAnchor id={"projects"}>
         <div className="projects">
-          <h1 className="section-title">Projects</h1>
+          <h1 className="section--title">Projects</h1>
           <div className="project-menu">
-            <button
-              className={this.state.professional ? "active" : ""}
-              onClick={this.switchToProfessional}
-            >
-              Professional
-            </button>
             <button
               className={!this.state.professional ? "active" : ""}
               onClick={this.switchToPersonal}
             >
               Personal
+            </button>
+            <button
+              className={this.state.professional ? "active" : ""}
+              onClick={this.switchToProfessional}
+            >
+              Professional
             </button>
           </div>
           {this.state.professional ? (
