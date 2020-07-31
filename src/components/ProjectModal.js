@@ -125,20 +125,25 @@ const ProjectModal = (props) => {
               </button>
             )}
           </span>
+          {/* TODO: open these links in new tab? */}
           <span className="project-modal--extra-links">
             {demoLink ? (
-              <FontAwesomeIcon
-                icon={faYoutube}
-                className="extra-big-icon youtube"
-              />
+              <a href={demoLink}>
+                <FontAwesomeIcon
+                  icon={faYoutube}
+                  className="extra-big-icon youtube"
+                />
+              </a>
             ) : (
               ""
             )}
             {trello ? (
-              <FontAwesomeIcon
-                icon={faTrello}
-                className="extra-big-icon trello"
-              />
+              <a href={trello}>
+                <FontAwesomeIcon
+                  icon={faTrello}
+                  className="extra-big-icon trello"
+                />
+              </a>
             ) : (
               ""
             )}

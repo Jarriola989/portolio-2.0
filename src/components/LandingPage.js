@@ -33,9 +33,9 @@ class LandingPage extends Component {
           <br />
           Software Engineer
           <br />
-          <button className="landing--btn">
+          <a href="#projects" className="landing--btn">
             View My Work &nbsp; <FontAwesomeIcon icon={faArrowRight} />
-          </button>
+          </a>
         </div>
       </section>
     );
