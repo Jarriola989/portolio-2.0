@@ -35,7 +35,7 @@ class Contact extends Component {
         formErrors.name = value.length < 2 ? "Name is required." : "";
         break;
       case "email":
-        formErrors.email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+        formErrors.email = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
           value
         )
           ? ""
