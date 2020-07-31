@@ -108,7 +108,10 @@ class Projects extends Component {
                 );
               })}
           </div>
-          <ProjectModal project={PROJECTS[this.state.projectSelected]} />
+          <ProjectModal
+            project={PROJECTS[this.state.projectSelected]}
+            closeProject={this.closeProject}
+          />
         </div>
       </ScrollableAnchor>
     );

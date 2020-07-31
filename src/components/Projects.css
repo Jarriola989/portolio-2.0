@@ -301,6 +301,16 @@ button.active {
   color: rgb(43, 105, 162);
 }
 
+.project-modal--exit {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  font-size: 3rem;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1300px) {
   .project-modal {
     width: 85%;

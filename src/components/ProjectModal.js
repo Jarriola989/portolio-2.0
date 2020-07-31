@@ -3,7 +3,11 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import { PROJECT_TYPE } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExternalLinkAlt, faLock } from "@fortawesome/free-solid-svg-icons";
+import {
+  faExternalLinkAlt,
+  faLock,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faYoutube,
@@ -28,7 +32,11 @@ const ProjectModal = (props) => {
   } = props.project || {};
   return (
     <div className={props.project ? "project-modal" : "project-modal hide"}>
-      {/* <div className="project-card--images"></div> */}
+      <FontAwesomeIcon
+        icon={faTimes}
+        className="project-modal--exit"
+        onClick={props.closeProject}
+      />
       <AwesomeSlider
         className={
           props.project ? "project-modal--images" : "project-modal--images hide"
