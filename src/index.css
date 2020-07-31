@@ -18,9 +18,9 @@ body {
   font-size: 1.6rem;
 }
 
-/* TODO: Set rem size for XS phones */
-/* @media only screen and (max-width: 408) {
+@media only screen and (max-width: 900px) {
   html {
-    font-size: 90%;
+    font-size: 55%;
   }
-} */
+}
+

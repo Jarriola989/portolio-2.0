@@ -303,13 +303,23 @@ button.active {
 
 @media only screen and (max-width: 1300px) {
   .project-modal {
-    width: 80%;
+    width: 85%;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   .project-modal {
     width: 95%;
+  }
+}
+
+/* TODO: fix link allignment */
+@media only screen and (max-width: 720px) {
+  .project-modal--images {
+    height: 40%;
+  }
+  .project-modal--details {
+    height: 50%;
   }
 }
 
