@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"); */
 
 .projects {
   position: relative;
@@ -11,23 +11,27 @@
 }
 
 .project-menu {
-  margin-left: 7.5%;
+  /* border: solid; */
+  text-align: center;
 }
 
 .project-menu button {
   font-family: "Montserrat", sans-serif;
   color: rgb(199, 199, 199);
   background-color: transparent;
-  font-size: 18px;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 5px;
+  font-size: 2rem;
+  padding: 1rem 0;
+  margin: 1rem 3rem;
+  /* border-radius: 5px; */
   cursor: pointer;
+  border: none;
+  border-bottom: solid;
   border-color: transparent;
+  transition: all 0.2s ease;
 }
 
 .project-menu button:hover {
-  border-color: rgb(159, 159, 159);
+  border-color: #da4167;
 }
 
 .project-menu button:focus {
@@ -35,10 +39,9 @@
 }
 
 button.active {
-  background-color: rgb(74, 78, 84);
-}
-button.active:hover {
-  border-color: transparent;
+  border-color: #da4167;
+  color: #da4167;
+  font-weight: 600;
 }
 
 /********** Project Display **********/
