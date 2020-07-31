@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import { useInView } from "react-intersection-observer";
 import "./LandingPage.css";
 import "./Skills.css";
@@ -7,10 +7,13 @@ import ScrollableAnchor from "react-scrollable-anchor";
 import { LANGUAGE, FRAMEWORK, STACK, DATABASE } from "../constants";
 
 const Skills = () => {
-  const [languages, languagesInView] = useInView({
+  // languagesInView
+  const [languages] = useInView({
     threshold: 0,
   });
-  const [frameworks, frameworksInView] = useInView({
+
+  // frameworksInView
+  const [frameworks] = useInView({
     threshold: 0,
   });
 

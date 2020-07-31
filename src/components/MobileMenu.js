@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import resume from "../documents/resume.pdf";
 import "./MobileMenu.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 class MobileMenu extends Component {
   constructor() {
