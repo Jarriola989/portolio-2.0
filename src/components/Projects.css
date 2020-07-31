@@ -312,3 +312,9 @@ button.active {
     width: 95%;
   }
 }
+
+@media only screen and (max-width: 660px) {
+  .project--display {
+    margin: 1rem;
+  }
+}
