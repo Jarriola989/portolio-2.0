@@ -54,11 +54,19 @@ button.active:hover {
 .project--container {
   width: 40rem;
   height: 40rem;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 2rem;
   cursor: pointer;
   box-shadow: 4px 15px 20px rgba(0, 0, 0, 0.3);
   position: relative;
+  z-index: 0;
+}
+.project--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  z-index: 0;
 }
 
 .project--container-overlay {
@@ -68,8 +76,7 @@ button.active:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 10;
-  /* background-color: white; */
+  z-index: 100;
   background-image: linear-gradient(
     120deg,
     transparent 0%,
@@ -78,6 +85,7 @@ button.active:hover {
   );
   background-size: 270%;
   transition: 0.3s all ease;
+  border-radius: 5px;
 }
 
 .project--container-overlay:hover {
@@ -106,77 +114,6 @@ button.active:hover {
   opacity: 1;
 }
 
-.project--img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 3px;
-  z-index: 0;
-}
-
-.project-box:hover img {
-  filter: blur(3px) brightness(80%);
-}
-
-.project-box:hover .project-details {
-  opacity: 1;
-  visibility: visible;
-}
-
-.mobile-app {
-  object-fit: contain !important;
-}
-
-.project-details {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "PT Sans", sans-serif;
-  font-size: 4rem;
-  transition: all 0.4s;
-  color: rgb(63, 63, 63);
-}
-
-.project-title {
-  margin: 1rem;
-}
-
-.white {
-  color: white;
-}
-
-.project-details button {
-  padding: 1rem 2rem;
-  font-size: 1.8rem;
-  border: none;
-  border-radius: 0.5rem;
-  /* background-color: transparent; */
-  background-color: rgba(148, 166, 187);
-  color: white;
-  /* font-weight: bold; */
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.project-details button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
-}
-
-.project-details button:focus {
-  outline: none;
-  transform: translateY(0px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.select img {
-  opacity: 1;
-}
-
 .overlay {
   position: fixed;
   height: 100%;
@@ -187,7 +124,7 @@ button.active:hover {
   opacity: 0;
   visibility: hidden;
   z-index: 0;
-  transition: all 0.4s;
+  transition: all 1s;
 }
 .show {
   opacity: 0.7;
@@ -195,46 +132,179 @@ button.active:hover {
   visibility: visible;
 }
 
-@media only screen and (max-width: 1250px) {
-  .overlay {
-    width: 150%;
-  }
-  .all-projects {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2.5rem;
-    row-gap: 2.5rem;
+/* project-modal */
+
+.project-modal {
+  background-color: rgb(235, 235, 235);
+  display: block;
+  position: fixed;
+  height: 95%;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 5px;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.project-modal--images {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  /* border: solid green; */
+  position: relative;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /* overflow: hidden; */
+}
+
+.project-modal--image {
+  /* border: solid green; */
+  /* width: 80%; */
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: contain;
+  position: absolute;
+  z-index: 0;
+}
+
+.project-modal--details {
+  /* border: solid; */
+  position: relative;
+  margin: 4rem;
+  height: 40%;
+  color: rgb(18, 18, 18);
+}
+
+.project-modal--title {
+  font-size: 4.5rem;
+  /* margin-top: 2rem; */
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+  /* border: solid; */
+}
+
+.project-modal--description {
+  margin: 2rem 0;
+  /* font-size: 1.6rem; */
+}
+
+.project-modal--notes {
+  font-size: 1.4rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: rgb(225, 225, 225);
+}
+
+.project-modal--stack {
+  margin: 2rem -1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-modal--stack span {
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(67, 70, 86);
+}
+
+.project-modal--links {
+  /* border: solid; */
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.project-modal--link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  color: white;
+  background-color: rgb(111, 117, 151);
+  border: solid;
+  border-color: rgb(111, 117, 151);
+  margin: 0 1rem;
+  transition: all 0.1s ease;
+  /* text-align: center; */
+}
+
+.project-modal--link:hover {
+  background-color: rgb(125, 132, 168);
+  border-color: rgb(125, 132, 168);
+}
+
+.transparent {
+  background-color: transparent;
+  color: rgb(93, 98, 128);
+  font-weight: 600;
+}
+
+.transparent:hover {
+  background-color: rgba(111, 117, 151, 0.1);
+  color: rgb(93, 98, 128);
+}
+
+.project-modal--extra-links {
+  /* border: solid; */
+  margin: 0 -1rem;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-modal--link-icon {
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+}
+
+.big-icon {
+  font-size: 2.2rem;
+  /* border: solid; */
+  vertical-align: middle;
+}
+
+.extra-big-icon {
+  font-size: 5rem;
+  margin: 0 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.extra-big-icon:hover {
+  transform: scale(1.2);
+}
+
+.youtube {
+  color: rgb(235, 50, 35);
+}
+
+.trello {
+  color: rgb(43, 105, 162);
+}
+
+@media only screen and (max-width: 1300px) {
+  .project-modal {
+    width: 80%;
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .projects {
-    height: 100%;
-  }
-  .project-menu {
-    margin: auto;
-    text-align: center;
-    margin: 10px;
-  }
-
-  .project-menu button {
-    color: rgb(74, 78, 84);
-  }
-  button.active {
-    color: rgb(199, 199, 199);
-  }
-
-  .all-projects {
-    grid-template-columns: repeat(1, 1fr);
-    width: 100%;
-  }
-  .project-box {
-    width: 90%;
-    margin: 10px auto 15px auto;
-  }
-  .all-projects {
-    overflow: hidden;
-    display: block;
-    height: auto;
-    margin-bottom: 10rem;
+@media only screen and (max-width: 1000px) {
+  .project-modal {
+    width: 95%;
   }
 }

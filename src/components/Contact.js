@@ -74,7 +74,7 @@ class Contact extends Component {
     return (
       <ScrollableAnchor id={"contact"}>
         <div className="contact">
-          <h1 className="section-title contact-title">Contact</h1>
+          <h1 className="section--title">Contact</h1>
           <div className="message">
             <div className="name">
               <input

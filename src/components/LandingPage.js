@@ -24,7 +24,7 @@ class LandingPage extends Component {
   render() {
     return (
       <section className="section-landing">
-        <video className="bg-video__content" autoPlay loop>
+        <video className="bg-video__content" autoPlay loop muted>
           <source src={milkyway} type="video/mp4" />
           Your browser is not supported!
         </video>
