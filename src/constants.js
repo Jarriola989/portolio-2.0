@@ -11,6 +11,7 @@ export const FEATURE_TYPE = {
 export const LANGUAGE = {
   javascript: "Javascript",
   typescript: "Typescript",
+  jsx: "JSX",
   java: "Java",
   html: "HTML5",
   css: "CSS3",

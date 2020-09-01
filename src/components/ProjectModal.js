@@ -66,11 +66,6 @@ const ProjectModal = (props) => {
         ) : (
           ""
         )}
-        <div className="project-modal--stack">
-          {stack?.map((tool) => {
-            return <span>{tool}</span>;
-          })}
-        </div>
         <div className="project-modal--links">
           <span className="project-modal--extra-links">
             {liveLink?.length > 0 ? (

@@ -15,6 +15,7 @@ import rhaz1 from "./images/rhaz.png";
 import wisedb1 from "./images/wisedb1.png";
 import wisedb2 from "./images/wisedb2.png";
 import wisedb3 from "./images/wisedb3.png";
+import sprintbot1 from "./images/sprintbot1.png";
 
 export const PROJECTS = {
   HomBound: {
@@ -363,8 +364,8 @@ export const PROJECTS = {
     notes: "This bot is yet to be released. All repos are private.",
     images: [
       {
-        src: "",
-        alt: "",
+        src: sprintbot1,
+        alt: "sprint bot logo",
       },
       {
         src: "",

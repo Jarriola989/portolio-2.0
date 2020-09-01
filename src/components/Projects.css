@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"); */
-
 .projects {
   position: relative;
   height: 100%;
@@ -60,7 +58,6 @@ button.active {
   height: 40rem;
   border-radius: 5px;
   margin: 2rem;
-  cursor: pointer;
   box-shadow: 4px 15px 20px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 0;
@@ -74,47 +71,43 @@ button.active {
 }
 
 .project--container-overlay {
-  /* border: solid; */
+  border: none;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 100;
-  background-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.8) 50%
-  );
-  background-size: 270%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   transition: 0.3s all ease;
   border-radius: 5px;
 }
 
 .project--container-overlay:hover {
-  background-position: 100%;
+  backdrop-filter: blur(5px) brightness(0.6);
 }
 
 .project--btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  background-color: rgb(37, 39, 51);
+  align-self: center;
+  border: white solid;
+  background-color: transparent;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 1rem 2rem;
   z-index: 20;
   opacity: 0;
-  transition: 0.5s all ease 0.2s;
+  visibility: hidden;
+  transition: 1s all ease 0.2s;
+  cursor: pointer;
 }
 
 /* TODO: button is fading out after white stuff */
 .project--container-overlay:hover .project--btn {
-  transform: translate(-50%, -50%);
+  visibility: visible;
   opacity: 1;
 }
 
@@ -212,17 +205,27 @@ button.active {
 }
 
 .project-modal--stack {
-  margin: 2rem -1rem;
+  margin: 0rem 3rem;
+  font-weight: 500;
   display: flex;
   flex-wrap: wrap;
+  visibility: none;
+  opacity: 0;
+  transition: all 1.2s;
+}
+
+.project--container-overlay:hover .project-modal--stack {
+  visibility: visible;
+  opacity: 1;
+  /* transform: translateY(50%); */
 }
 
 .project-modal--stack span {
-  margin: 0.5rem 1rem;
+  margin: 1rem 1.5rem;
   padding: 0.5rem 1rem;
   border-radius: 3px;
   color: white;
-  background-color: rgb(67, 70, 86);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .project-modal--links {
@@ -336,5 +339,8 @@ button.active {
 @media only screen and (max-width: 660px) {
   .project--display {
     margin: 1rem;
+  }
+  .project-modal--details {
+    margin: 3rem;
   }
 }
