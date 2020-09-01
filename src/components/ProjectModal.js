@@ -22,7 +22,6 @@ const ProjectModal = (props) => {
     description,
     notes,
     images,
-    stack,
     liveLink,
     clientRepo,
     serverRepo,
