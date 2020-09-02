@@ -96,9 +96,9 @@ class Projects extends Component {
                       alt={altMessage}
                     />
                     <div className="project--container-overlay">
-                      <div className="project-modal--stack">
+                      <div className="project--stack">
                         {PROJECTS[key].stack.map((tool) => {
-                          return <span>{tool}</span>;
+                          return <span key={tool}>{tool}</span>;
                         })}
                       </div>
                       <button

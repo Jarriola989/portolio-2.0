@@ -92,7 +92,7 @@ button.active {
 .project--btn {
   align-self: center;
   border: white solid;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
@@ -101,7 +101,7 @@ button.active {
   z-index: 20;
   opacity: 0;
   visibility: hidden;
-  transition: 1s all ease 0.2s;
+  transition: 1s all ease, 0.2s background-color;
   cursor: pointer;
 }
 
@@ -109,6 +109,10 @@ button.active {
 .project--container-overlay:hover .project--btn {
   visibility: visible;
   opacity: 1;
+}
+
+.project--btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .overlay {
@@ -176,35 +180,36 @@ button.active {
 }
 
 .project-modal--details {
-  /* border: solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  margin: 4rem;
-  height: 40%;
+  padding: 4rem;
+  height: 50%;
   color: rgb(18, 18, 18);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .project-modal--title {
   font-size: 4.5rem;
-  /* margin-top: 2rem; */
   font-weight: 500;
   font-family: "Ubuntu", sans-serif;
-  /* border: solid; */
 }
 
 .project-modal--description {
-  margin: 2rem 0;
-  /* font-size: 1.6rem; */
+  line-height: 1.5;
 }
 
 .project-modal--notes {
   font-size: 1.4rem;
-  margin: 2rem 0;
+  line-height: 1.5;
   padding: 1rem;
   border-radius: 3px;
   background-color: rgb(225, 225, 225);
 }
 
-.project-modal--stack {
+.project--stack {
   margin: 0rem 3rem;
   font-weight: 500;
   display: flex;
@@ -214,13 +219,13 @@ button.active {
   transition: all 1.2s;
 }
 
-.project--container-overlay:hover .project-modal--stack {
+.project--container-overlay:hover .project--stack {
   visibility: visible;
   opacity: 1;
   /* transform: translateY(50%); */
 }
 
-.project-modal--stack span {
+.project--stack span {
   margin: 1rem 1.5rem;
   padding: 0.5rem 1rem;
   border-radius: 3px;
@@ -230,8 +235,6 @@ button.active {
 
 .project-modal--links {
   /* border: solid; */
-  position: absolute;
-  bottom: 0;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -247,7 +250,6 @@ button.active {
   border-color: rgb(111, 117, 151);
   margin: 0 1rem;
   transition: all 0.1s ease;
-  /* text-align: center; */
 }
 
 .project-modal--link:hover {
@@ -271,6 +273,7 @@ button.active {
   margin: 0 -1rem;
   align-self: center;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -326,21 +329,69 @@ button.active {
   }
 }
 
-/* TODO: fix link allignment */
 @media only screen and (max-width: 720px) {
   .project-modal--images {
     height: 40%;
   }
   .project-modal--details {
-    height: 50%;
+    height: 60%;
+    padding-top: 6rem;
+  }
+
+  .extra {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .project-modal--extra-links {
+    min-width: 100%;
   }
 }
 
 @media only screen and (max-width: 660px) {
+  .project-modal--title {
+    font-size: 4rem;
+  }
   .project--display {
     margin: 1rem;
   }
+
+  .project-modal--link {
+    margin: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .project-modal--link {
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .project-modal--title {
+    font-size: 3rem;
+  }
+  .project-modal--link {
+    flex: 1;
+  }
+  .project-modal--link-icon {
+    min-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .project-modal--link {
+    width: 100%;
+    flex: initial;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .project-modal--link-icon {
+    min-width: auto;
+  }
   .project-modal--details {
-    margin: 3rem;
+    padding: 3rem;
+    padding-top: 4rem;
   }
 }

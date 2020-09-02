@@ -24,28 +24,36 @@ const Skills = () => {
         <div className="skills--grid">
           <ul className="skills--list" ref={languages}>
             {Object.keys(LANGUAGE).map((key) => (
-              <li className="skills--skill">{LANGUAGE[key]}</li>
+              <li className="skills--skill" key={key}>
+                {LANGUAGE[key]}
+              </li>
             ))}
           </ul>
           <h2 className="skills--subtitle">Languages</h2>
 
           <ul className="skills--list" ref={frameworks}>
             {Object.keys(FRAMEWORK).map((key) => (
-              <li className="skills--skill">{FRAMEWORK[key]}</li>
+              <li className="skills--skill" key={key}>
+                {FRAMEWORK[key]}
+              </li>
             ))}
           </ul>
           <h2 className="skills--subtitle">Frameworks</h2>
 
           <ul className="skills--list" ref={frameworks}>
             {Object.keys(DATABASE).map((key) => (
-              <li className="skills--skill">{DATABASE[key]}</li>
+              <li className="skills--skill" key={key}>
+                {DATABASE[key]}
+              </li>
             ))}
           </ul>
           <h2 className="skills--subtitle">Databases</h2>
 
           <ul className="skills--list" ref={frameworks}>
             {Object.keys(STACK).map((key) => (
-              <li className="skills--skill">{STACK[key]}</li>
+              <li className="skills--skill" key={key}>
+                {STACK[key]}
+              </li>
             ))}
           </ul>
           <h2 className="skills--subtitle">Tools</h2>

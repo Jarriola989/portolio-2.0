@@ -128,7 +128,7 @@ const ProjectModal = (props) => {
             )}
           </span>
           {/* TODO: open these links in new tab? */}
-          <span className="project-modal--extra-links">
+          <span className="project-modal--extra-links extra">
             {demoLink ? (
               <a href={demoLink}>
                 <FontAwesomeIcon
