@@ -9,10 +9,6 @@
   background-color: rgb(37, 39, 51);
 }
 
-.contact-title {
-  color: #f6d8ae;
-}
-
 /* TODO: fix shifting text boxes when error appears
  */
 .message {
@@ -46,7 +42,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #f6d8ae;
+  border-color: #da4167;
   outline: none;
 }
 
@@ -64,23 +60,31 @@ textarea:focus {
 .body textarea {
   border-color: rgb(157, 157, 157);
   word-wrap: normal;
+  font-family: inherit;
 }
 
 .body textarea:focus {
-  border-color: #f6d8ae;
+  border-color: #da4167;
 }
 
 .message button {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
   margin: 0px auto auto 0px;
-  background-color: #f6d8ae;
-  padding: 1rem 2.5rem;
+  background-color: transparent;
+  border: white solid;
+  color: white;
+  padding: 1rem 3rem;
   min-width: 80px;
-  border-radius: 6px;
-  font-size: 1.7rem;
+  border-radius: 3px;
+  font-size: 1.8rem;
   cursor: pointer;
-  border: none;
+  transition: all 0.2s;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.message button:hover {
+  border: #da4167 solid;
+  color: #da4167;
 }
 .message button:focus {
   outline: none;
