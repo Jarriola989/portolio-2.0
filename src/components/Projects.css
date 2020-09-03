@@ -160,16 +160,12 @@ button.active {
   width: 100%;
   height: 50%;
   background-color: black;
-  /* border: solid green; */
   position: relative;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  /* overflow: hidden; */
 }
 
 .project-modal--image {
-  /* border: solid green; */
-  /* width: 80%; */
   height: 100%;
   top: 0;
   left: 50%;
@@ -399,8 +395,8 @@ button.active {
 /* TIMESTAMPS */
 .project-modal--timestamps {
   position: absolute;
-  top: 6%;
-  right: 3%;
+  top: 4rem;
+  right: 4rem;
   display: flex;
   flex-direction: column;
   font-size: 1.3rem;

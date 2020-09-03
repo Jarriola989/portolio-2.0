@@ -40,9 +40,6 @@ const ProjectModal = (props) => {
       owner: repo ? repo.owner : "",
     },
   });
-  console.log(`loading ${loading}`);
-  console.log(`error: ${error}`);
-  console.log(data);
 
   return (
     <div className={props.project ? "project-modal" : "project-modal hide"}>
@@ -76,6 +73,7 @@ const ProjectModal = (props) => {
                 icon={faCalendar}
                 className="project-modal--timestamp-icon"
               />
+              <b>Created on:</b>&nbsp;&nbsp;
               {moment(data.repository.createdAt).format("DD MMM YYYY")}
             </span>
             <span>
@@ -83,6 +81,7 @@ const ProjectModal = (props) => {
                 icon={faCodeBranch}
                 className="project-modal--timestamp-icon"
               />
+              <b>Last pushed:</b>&nbsp;&nbsp;
               {moment(data.repository.pushedAt).format("DD MMM YYYY")}
             </span>
           </div>

@@ -51,9 +51,7 @@ class Projects extends Component {
     const all = projectFilter === ProjectFilter.all;
     const personal = projectFilter === ProjectFilter.personal;
     const professional = projectFilter === ProjectFilter.professional;
-    console.log(all);
     const FILTER = personal ? PROJECT_TYPE.personal : PROJECT_TYPE.professional;
-    // console.log(filter);
     return (
       <ScrollableAnchor id={"projects"}>
         <div className="projects">
