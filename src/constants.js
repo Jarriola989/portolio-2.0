@@ -1,3 +1,7 @@
+export const GITHUB_USERNAME = "Jarriola989";
+export const HOMBOUND_ORG = "HomBound";
+export const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
+
 export const PROJECT_TYPE = {
   professional: "Professional",
   personal: "Personal",
@@ -32,7 +36,7 @@ export const FRAMEWORK = {
 };
 
 export const DATABASE = {
-  postgresql: "Postgresql",
+  postgresql: "PostgreSQL",
   sqlserver: "SQL Server",
   mysql: "MySQL",
   mongo: "MongoDB",

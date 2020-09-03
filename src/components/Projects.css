@@ -395,3 +395,20 @@ button.active {
     padding-top: 4rem;
   }
 }
+
+/* TIMESTAMPS */
+.project-modal--timestamps {
+  position: absolute;
+  top: 6%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  color: rgb(100, 100, 100);
+}
+.project-modal--timestamps span:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.project-modal--timestamp-icon {
+  margin-right: 1rem;
+}

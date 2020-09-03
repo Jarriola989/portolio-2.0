@@ -3,10 +3,12 @@
 footer {
   display: grid;
   color: white;
-  padding: 6rem;
+  padding: 5rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   row-gap: 4rem;
+  font-family: "PT Sans", sans-serif;
+  background-color: rgb(30, 31, 39);
 }
 
 .footer-name {
@@ -28,13 +30,11 @@ footer {
 
 .footer-name h3 {
   padding-top: 1rem;
-  font-family: "PT Sans", sans-serif;
 }
 
 .copyright {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  font-family: "PT Sans", sans-serif;
   line-height: 1.8;
   letter-spacing: 1px;
 }

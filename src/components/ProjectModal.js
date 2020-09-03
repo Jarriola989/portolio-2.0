@@ -1,4 +1,6 @@
 import React from "react";
+import { useQuery } from "@apollo/client";
+import moment from "moment";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import { PROJECT_TYPE } from "../constants";
@@ -7,16 +9,17 @@ import {
   faExternalLinkAlt,
   faLock,
   faTimes,
+  faCalendar,
+  faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faYoutube,
   faTrello,
 } from "@fortawesome/free-brands-svg-icons";
+import { GET_REPO } from "../graphql/get-repo";
 
 const ProjectModal = (props) => {
-  let imageCount = 0;
-  console.log(props.project);
   const {
     name,
     description,
@@ -28,7 +31,19 @@ const ProjectModal = (props) => {
     demoLink,
     trello,
     type,
+    repo,
   } = props.project || {};
+
+  const { loading, error, data } = useQuery(GET_REPO, {
+    variables: {
+      repoName: repo ? repo.name : "",
+      owner: repo ? repo.owner : "",
+    },
+  });
+  console.log(`loading ${loading}`);
+  console.log(`error: ${error}`);
+  console.log(data);
+
   return (
     <div className={props.project ? "project-modal" : "project-modal hide"}>
       <FontAwesomeIcon
@@ -44,10 +59,9 @@ const ProjectModal = (props) => {
       >
         {images
           ?.filter((image) => image.src !== "")
-          .map(({ src, alt }) => {
-            imageCount++;
+          .map(({ src, alt }, key) => {
             return (
-              <div style={{ backgroundColor: "transparent" }} key={imageCount}>
+              <div style={{ backgroundColor: "transparent" }} key={key}>
                 <img className="project-modal--image" src={src} alt={alt} />
               </div>
             );
@@ -55,6 +69,27 @@ const ProjectModal = (props) => {
       </AwesomeSlider>
 
       <div className="project-modal--details">
+        {data ? (
+          <div className="project-modal--timestamps">
+            <span>
+              <FontAwesomeIcon
+                icon={faCalendar}
+                className="project-modal--timestamp-icon"
+              />
+              {moment(data.repository.createdAt).format("DD MMM YYYY")}
+            </span>
+            <span>
+              <FontAwesomeIcon
+                icon={faCodeBranch}
+                className="project-modal--timestamp-icon"
+              />
+              {moment(data.repository.pushedAt).format("DD MMM YYYY")}
+            </span>
+          </div>
+        ) : (
+          ""
+        )}
+
         <h2 className="project-modal--title">{name}</h2>
         <p className="project-modal--description">{description}</p>
         {notes?.length > 0 ? (

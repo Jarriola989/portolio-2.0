@@ -5,6 +5,8 @@ import {
   LANGUAGE,
   FRAMEWORK,
   DATABASE,
+  HOMBOUND_ORG,
+  GITHUB_USERNAME,
 } from "./constants";
 import hombound1 from "./images/hombound1.png";
 import movieme1 from "./images/movieme1.png";
@@ -61,6 +63,10 @@ export const PROJECTS = {
       LANGUAGE.css,
       DATABASE.postgresql,
     ],
+    repo: {
+      name: "hombound-client",
+      owner: HOMBOUND_ORG,
+    },
   },
   MovieMe: {
     name: "Movie Me",
@@ -104,6 +110,10 @@ export const PROJECTS = {
       LANGUAGE.css,
       DATABASE.postgresql,
     ],
+    repo: {
+      name: "movie-me-client",
+      owner: GITHUB_USERNAME,
+    },
   },
   GreenTours: {
     name: "Green Tours",
@@ -133,6 +143,10 @@ export const PROJECTS = {
     type: PROJECT_TYPE.personal,
     features: [],
     stack: [LANGUAGE.html, LANGUAGE.css, LANGUAGE.sass],
+    repo: {
+      name: "green-tours",
+      owner: GITHUB_USERNAME,
+    },
   },
   GraphTheory: {
     name: "Graph Theory",
@@ -184,6 +198,10 @@ export const PROJECTS = {
       LANGUAGE.html,
       LANGUAGE.css,
     ],
+    repo: {
+      name: "graph-theory-ui",
+      owner: GITHUB_USERNAME,
+    },
   },
   HackerTracker: {
     name: "Hacker Tracker",
@@ -220,6 +238,10 @@ export const PROJECTS = {
       LANGUAGE.html,
       LANGUAGE.css,
     ],
+    repo: {
+      name: "password-checker",
+      owner: GITHUB_USERNAME,
+    },
   },
   Rhaz: {
     name: "Rhaz",
@@ -255,6 +277,10 @@ export const PROJECTS = {
       },
     ],
     stack: [LANGUAGE.csharp, STACK.unity],
+    repo: {
+      name: "rhaz",
+      owner: "wangscs",
+    },
   },
   WiseDB: {
     name: "WISEdb",

@@ -11,12 +11,12 @@ const Footer = () => {
     <footer>
       <div className="footer-name">
         <h1>Janeth Arriola</h1>
-        <h3>Software Developer</h3>
+        <h3>Software Engineer</h3>
       </div>
 
       <div className="copyright">
-        This portfolio was built and designed by Janeth Arriola using React,
-        Javascript, HTML5, and CSS3.
+        This portfolio was built by Janeth Arriola using React, Javascript,
+        HTML5, CSS3, Apollo and Github's GraphQL API.
       </div>
       <div className="footer-links">
         <a
