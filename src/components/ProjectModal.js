@@ -34,13 +34,13 @@ const ProjectModal = (props) => {
     repo,
   } = props.project || {};
 
-  const { loading, error, data } = useQuery(GET_REPO, {
+  const { loading, data } = useQuery(GET_REPO, {
     variables: {
       repoName: repo ? repo.name : "",
       owner: repo ? repo.owner : "",
     },
   });
-
+  console.log(loading);
   return (
     <div className={props.project ? "project-modal" : "project-modal hide"}>
       <FontAwesomeIcon
