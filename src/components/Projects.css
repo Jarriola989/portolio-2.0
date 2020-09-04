@@ -313,11 +313,19 @@ button.active {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1300px) {
+  .project-modal {
+    width: 70%;
+  }
+}
+
 @media only screen and (max-width: 1100px) {
+  .project-modal {
+    width: 80%;
+  }
   .project--display {
     margin: 2rem;
     margin-top: 2rem;
-
   }
 }
 

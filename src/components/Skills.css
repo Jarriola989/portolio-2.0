@@ -21,8 +21,29 @@
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: 2s all;
   /* border: solid; */
 }
+
+.fade-from-right {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(15rem);
+}
+.fade-from-left {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-15rem);
+}
+.fade-from-bottom {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15rem);
+}
+
 .top {
   grid-row: 2/3;
 }
