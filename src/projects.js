@@ -18,6 +18,9 @@ import wisedb1 from "./images/wisedb1.png";
 import wisedb2 from "./images/wisedb2.png";
 import wisedb3 from "./images/wisedb3.png";
 import sprintbot1 from "./images/sprintbot1.png";
+import sprintbot2 from './images/sprintbot2.png'
+import sprintbot3 from './images/sprintbot3.png'
+import sprintbot4 from './images/sprintbot4.png'
 
 export const PROJECTS = {
   HomBound: {
@@ -394,12 +397,16 @@ export const PROJECTS = {
         alt: "sprint bot logo",
       },
       {
-        src: "",
-        alt: "",
+        src: sprintbot2,
+        alt: "sprint bot - sprint review dialog",
       },
       {
-        src: "",
-        alt: "",
+        src: sprintbot3,
+        alt: "sprint bot - select projects view",
+      },
+      {
+        src: sprintbot4,
+        alt: "sprint bot - sprint planning dialog",
       },
     ],
     liveLink: "",
